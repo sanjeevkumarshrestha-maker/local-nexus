@@ -1,6 +1,6 @@
 import type { CollectionConfig } from 'payload'
 import { DetailedServicesBlock } from '../blocks/DetailedServices'
-import { HeroBlock, StoryBlock, CredibilityBlock } from '../blocks/Registry'
+import { HeroBlock, StoryBlock, CredibilityBlock, ServicesHighlight } from '../blocks/Registry'
 
 export const Pages: CollectionConfig = {
   slug: 'pages',
@@ -9,7 +9,7 @@ export const Pages: CollectionConfig = {
     defaultColumns: ['title', 'slug', 'updatedAt'],
   },
   access: {
-    read: () => true, // Allows public fetching by the Master Wrapper
+    read: () => true,
   },
   fields: [
     { name: 'title', type: 'text', required: true },
@@ -23,6 +23,7 @@ export const Pages: CollectionConfig = {
         HeroBlock,
         StoryBlock,
         CredibilityBlock,
+        ServicesHighlight,
       ],
     },
   ],

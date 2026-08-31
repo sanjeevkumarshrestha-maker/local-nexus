@@ -5,20 +5,18 @@ export const HeroBlock: Block = {
   labels: { singular: 'Hero Section', plural: 'Hero Sections' },
   fields: [
     { name: 'heading', type: 'text', required: true },
-    { name: 'subheading', type: 'text' },
-    { name: 'image_url', type: 'upload', relationTo: 'media', label: 'Hero Background Image' },
-    { name: 'label', type: 'text', label: 'Button Text (e.g. Book Now)' },
-    { name: 'url', type: 'text', label: 'Button Link (e.g. /contact)' },
+    { name: 'subheading', type: 'textarea' },
+    { name: 'label', type: 'text' },
+    { name: 'url', type: 'text' },
   ],
 }
 
 export const StoryBlock: Block = {
   slug: 'story',
-  labels: { singular: 'Story / About Block', plural: 'Story Blocks' },
+  labels: { singular: 'Story Block', plural: 'Story Blocks' },
   fields: [
     { name: 'heading', type: 'text', required: true },
     { name: 'content', type: 'textarea' },
-    { name: 'image_url', type: 'upload', relationTo: 'media', label: 'Side Image' },
   ],
 }
 
@@ -31,8 +29,34 @@ export const CredibilityBlock: Block = {
       name: 'stats',
       type: 'array',
       fields: [
-        { name: 'value', type: 'text', label: 'Stat Value (e.g. 15+)' },
-        { name: 'label', type: 'text', label: 'Stat Label (e.g. Years Experience)' },
+        { name: 'value', type: 'text' },
+        { name: 'label', type: 'text' },
+      ],
+    },
+  ],
+}
+
+export const ServicesHighlight: Block = {
+  slug: 'serviceshighlight',
+  labels: { singular: 'Services Highlight', plural: 'Services Highlights' },
+  fields: [
+    { name: 'sectionTitle', type: 'text' },
+    { name: 'subtitle', type: 'textarea' },
+    {
+      name: 'services',
+      type: 'array',
+      fields: [
+        { name: 'title', type: 'text' },
+        { name: 'description', type: 'textarea' },
+        { name: 'link', type: 'text' },
+      ],
+    },
+    {
+      name: 'viewAllCta',
+      type: 'group',
+      fields: [
+        { name: 'label', type: 'text' },
+        { name: 'link', type: 'text' },
       ],
     },
   ],
