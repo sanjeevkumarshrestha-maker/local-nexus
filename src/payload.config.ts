@@ -21,7 +21,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  cors: ['http://localhost:8080', 'https://local-nexus.onrender.com'],
+  cors: ['http://localhost:8080', 'http://localhost:5173', 'https://local-nexus.onrender.com'],
   collections: [Users, Media, Pages],
   globals: [Header, Footer],
   editor: lexicalEditor(),
