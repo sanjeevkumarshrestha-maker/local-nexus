@@ -13,17 +13,10 @@ async function run() {
     })
 
     if (existing.docs.length > 0) {
-      await payload.update({
-        collection: 'pages',
-        id: existing.docs[0].id,
-        data,
-      })
+      await payload.update({ collection: 'pages', id: existing.docs[0].id, data })
       console.log(`Updated page: ${slug}`)
     } else {
-      await payload.create({
-        collection: 'pages',
-        data,
-      })
+      await payload.create({ collection: 'pages', data })
       console.log(`Created page: ${slug}`)
     }
   }
@@ -53,10 +46,10 @@ async function run() {
         sectionTitle: 'Comprehensive care, one gentle clinic',
         subtitle: 'From routine checkups to full smile transformations, every treatment is planned around your comfort and long-term oral health.',
         services: [
-          { title: 'General Dentistry', description: 'Routine exams, cleanings, and preventive care to keep your whole family\'s smile healthy year-round.', link: '/services' },
-          { title: 'Cosmetic Dentistry', description: 'Veneers, bonding, and smile design tailored to your facial features and personal style.', link: '/services' },
-          { title: 'Dental Implants', description: 'Permanent, natural-looking tooth replacement using precision-guided implant technology.', link: '/services' },
-          { title: 'Orthodontics', description: 'Braces and clear aligners that straighten teeth discreetly, at any age.', link: '/services' }
+          { title: 'General Dentistry', description: 'Routine exams, cleanings, and preventive care.', link: '/services' },
+          { title: 'Cosmetic Dentistry', description: 'Veneers, bonding, and smile design.', link: '/services' },
+          { title: 'Dental Implants', description: 'Permanent, natural-looking tooth replacement.', link: '/services' },
+          { title: 'Orthodontics', description: 'Braces and clear aligners.', link: '/services' }
         ],
         viewAllCta: { label: 'View All Services', link: '/services' }
       }
@@ -74,6 +67,78 @@ async function run() {
       }
     ]
   })
+
+  await payload.updateGlobal({
+    slug: 'header',
+    data: {
+      logo_text: 'Perfect Smile',
+      nav_links: [
+        { label: 'Home', link: '/' },
+        {
+          label: 'Services',
+          link: '/services',
+          mega_items: [
+            { label: 'General Dentistry', link: '/services/general', description: 'Routine care & checkups' },
+            { label: 'Cosmetic', link: '/services/cosmetic', description: 'Veneers & whitening' },
+            { label: 'Implants', link: '/services/implants', description: 'Permanent replacement' }
+          ]
+        },
+        { label: 'About Us', link: '/about' },
+        { label: 'Smile Gallery', link: '/gallery' }
+      ],
+      secondary_cta_text: '(01) 456-7890',
+      secondary_cta_link: 'tel:014567890',
+      cta_text: 'Book Online',
+      cta_link: '/contact'
+    }
+  })
+  console.log('Updated Global: header')
+
+  await payload.updateGlobal({
+    slug: 'footer',
+    data: {
+      trust_badges: [
+        { label: 'NMC Registered' },
+        { label: 'Top Rated in Kathmandu' }
+      ],
+      logo_text: 'Perfect Smile',
+      description: 'Advanced dental care in Kathmandu providing painless dentistry and world-class treatments.',
+      socials: [
+        { icon: 'Facebook', label: 'Facebook', url: 'https://facebook.com' },
+        { icon: 'Instagram', label: 'Instagram', url: 'https://instagram.com' }
+      ],
+      columns: [
+        {
+          title: 'Services',
+          items: [
+            { label: 'General Dentistry', url: '/services/general' },
+            { label: 'Cosmetic Dentistry', url: '/services/cosmetic' },
+            { label: 'Dental Implants', url: '/services/implants' }
+          ]
+        },
+        {
+          title: 'Clinic',
+          items: [
+            { label: 'About Us', url: '/about' },
+            { label: 'Smile Gallery', url: '/gallery' },
+            { label: 'Contact', url: '/contact' }
+          ]
+        }
+      ],
+      newsletter: {
+        title: 'Smile Tips',
+        description: 'Get monthly dental care tips straight to your inbox.',
+        placeholder: 'Enter your email',
+        button_text: 'Subscribe'
+      },
+      copyright_text: '© 2026 Perfect Smile Dental Clinic. All rights reserved.',
+      legal_links: [
+        { label: 'Privacy Policy', url: '/privacy' },
+        { label: 'Terms of Service', url: '/terms' }
+      ]
+    }
+  })
+  console.log('Updated Global: footer')
 
   console.log('✅ Seeding complete!')
   process.exit(0)

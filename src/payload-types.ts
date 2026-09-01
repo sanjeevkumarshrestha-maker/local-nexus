@@ -86,11 +86,17 @@ export interface Config {
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
   };
   db: {
-    defaultIDType: number;
+    defaultIDType: string;
   };
   fallbackLocale: null;
-  globals: {};
-  globalsSelect: {};
+  globals: {
+    header: Header;
+    footer: Footer;
+  };
+  globalsSelect: {
+    header: HeaderSelect<false> | HeaderSelect<true>;
+    footer: FooterSelect<false> | FooterSelect<true>;
+  };
   locale: null;
   widgets: {
     collections: CollectionsWidget;
@@ -124,7 +130,7 @@ export interface UserAuthOperations {
  * via the `definition` "users".
  */
 export interface User {
-  id: number;
+  id: string;
   updatedAt: string;
   createdAt: string;
   email: string;
@@ -149,7 +155,7 @@ export interface User {
  * via the `definition` "media".
  */
 export interface Media {
-  id: number;
+  id: string;
   alt: string;
   updatedAt: string;
   createdAt: string;
@@ -168,7 +174,7 @@ export interface Media {
  * via the `definition` "pages".
  */
 export interface Page {
-  id: number;
+  id: string;
   title: string;
   slug: string;
   blocks?:
@@ -182,7 +188,7 @@ export interface Page {
                   title: string;
                   icon?: string | null;
                   description?: string | null;
-                  image_url?: (number | null) | Media;
+                  image_url?: (string | null) | Media;
                   duration?: string | null;
                   cta_text?: string | null;
                   id?: string | null;
@@ -195,7 +201,6 @@ export interface Page {
         | {
             heading: string;
             subheading?: string | null;
-            image_url?: (number | null) | Media;
             label?: string | null;
             url?: string | null;
             id?: string | null;
@@ -205,7 +210,6 @@ export interface Page {
         | {
             heading: string;
             content?: string | null;
-            image_url?: (number | null) | Media;
             id?: string | null;
             blockName?: string | null;
             blockType: 'story';
@@ -223,6 +227,25 @@ export interface Page {
             blockName?: string | null;
             blockType: 'credibility';
           }
+        | {
+            sectionTitle?: string | null;
+            subtitle?: string | null;
+            services?:
+              | {
+                  title?: string | null;
+                  description?: string | null;
+                  link?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            viewAllCta?: {
+              label?: string | null;
+              link?: string | null;
+            };
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'serviceshighlight';
+          }
       )[]
     | null;
   updatedAt: string;
@@ -233,7 +256,7 @@ export interface Page {
  * via the `definition` "payload-kv".
  */
 export interface PayloadKv {
-  id: number;
+  id: string;
   key: string;
   data:
     | {
@@ -250,24 +273,24 @@ export interface PayloadKv {
  * via the `definition` "payload-locked-documents".
  */
 export interface PayloadLockedDocument {
-  id: number;
+  id: string;
   document?:
     | ({
         relationTo: 'users';
-        value: number | User;
+        value: string | User;
       } | null)
     | ({
         relationTo: 'media';
-        value: number | Media;
+        value: string | Media;
       } | null)
     | ({
         relationTo: 'pages';
-        value: number | Page;
+        value: string | Page;
       } | null);
   globalSlug?: string | null;
   user: {
     relationTo: 'users';
-    value: number | User;
+    value: string | User;
   };
   updatedAt: string;
   createdAt: string;
@@ -277,10 +300,10 @@ export interface PayloadLockedDocument {
  * via the `definition` "payload-preferences".
  */
 export interface PayloadPreference {
-  id: number;
+  id: string;
   user: {
     relationTo: 'users';
-    value: number | User;
+    value: string | User;
   };
   key?: string | null;
   value?:
@@ -300,7 +323,7 @@ export interface PayloadPreference {
  * via the `definition` "payload-migrations".
  */
 export interface PayloadMigration {
-  id: number;
+  id: string;
   name?: string | null;
   batch?: number | null;
   updatedAt: string;
@@ -381,7 +404,6 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               heading?: T;
               subheading?: T;
-              image_url?: T;
               label?: T;
               url?: T;
               id?: T;
@@ -392,7 +414,6 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               heading?: T;
               content?: T;
-              image_url?: T;
               id?: T;
               blockName?: T;
             };
@@ -406,6 +427,28 @@ export interface PagesSelect<T extends boolean = true> {
                     value?: T;
                     label?: T;
                     id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        serviceshighlight?:
+          | T
+          | {
+              sectionTitle?: T;
+              subtitle?: T;
+              services?:
+                | T
+                | {
+                    title?: T;
+                    description?: T;
+                    link?: T;
+                    id?: T;
+                  };
+              viewAllCta?:
+                | T
+                | {
+                    label?: T;
+                    link?: T;
                   };
               id?: T;
               blockName?: T;
@@ -453,6 +496,174 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
   batch?: T;
   updatedAt?: T;
   createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "header".
+ */
+export interface Header {
+  id: string;
+  logo_text?: string | null;
+  logo_url?: string | null;
+  nav_links?:
+    | {
+        label: string;
+        link: string;
+        mega_items?:
+          | {
+              label: string;
+              link: string;
+              description?: string | null;
+              id?: string | null;
+            }[]
+          | null;
+        id?: string | null;
+      }[]
+    | null;
+  secondary_cta_text?: string | null;
+  secondary_cta_link?: string | null;
+  cta_text?: string | null;
+  cta_link?: string | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "footer".
+ */
+export interface Footer {
+  id: string;
+  trust_badges?:
+    | {
+        label: string;
+        id?: string | null;
+      }[]
+    | null;
+  image_url?: string | null;
+  logo_text?: string | null;
+  description?: string | null;
+  socials?:
+    | {
+        icon?: string | null;
+        label?: string | null;
+        url: string;
+        id?: string | null;
+      }[]
+    | null;
+  columns?:
+    | {
+        title?: string | null;
+        items?:
+          | {
+              label: string;
+              url: string;
+              id?: string | null;
+            }[]
+          | null;
+        id?: string | null;
+      }[]
+    | null;
+  newsletter?: {
+    title?: string | null;
+    description?: string | null;
+    placeholder?: string | null;
+    button_text?: string | null;
+  };
+  copyright_text?: string | null;
+  legal_links?:
+    | {
+        label: string;
+        url: string;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "header_select".
+ */
+export interface HeaderSelect<T extends boolean = true> {
+  logo_text?: T;
+  logo_url?: T;
+  nav_links?:
+    | T
+    | {
+        label?: T;
+        link?: T;
+        mega_items?:
+          | T
+          | {
+              label?: T;
+              link?: T;
+              description?: T;
+              id?: T;
+            };
+        id?: T;
+      };
+  secondary_cta_text?: T;
+  secondary_cta_link?: T;
+  cta_text?: T;
+  cta_link?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "footer_select".
+ */
+export interface FooterSelect<T extends boolean = true> {
+  trust_badges?:
+    | T
+    | {
+        label?: T;
+        id?: T;
+      };
+  image_url?: T;
+  logo_text?: T;
+  description?: T;
+  socials?:
+    | T
+    | {
+        icon?: T;
+        label?: T;
+        url?: T;
+        id?: T;
+      };
+  columns?:
+    | T
+    | {
+        title?: T;
+        items?:
+          | T
+          | {
+              label?: T;
+              url?: T;
+              id?: T;
+            };
+        id?: T;
+      };
+  newsletter?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        placeholder?: T;
+        button_text?: T;
+      };
+  copyright_text?: T;
+  legal_links?:
+    | T
+    | {
+        label?: T;
+        url?: T;
+        id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
