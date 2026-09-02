@@ -215,11 +215,10 @@ export interface Page {
             blockType: 'story';
           }
         | {
-            heading: string;
             stats?:
               | {
-                  value?: string | null;
-                  label?: string | null;
+                  value: string;
+                  label: string;
                   id?: string | null;
                 }[]
               | null;
@@ -228,19 +227,22 @@ export interface Page {
             blockType: 'credibility';
           }
         | {
-            sectionTitle?: string | null;
-            subtitle?: string | null;
+            badge?: string | null;
+            heading: string;
+            highlightedText?: string | null;
+            subheading?: string | null;
             services?:
               | {
-                  title?: string | null;
+                  icon?: string | null;
+                  title: string;
                   description?: string | null;
-                  link?: string | null;
+                  url: string;
                   id?: string | null;
                 }[]
               | null;
             viewAllCta?: {
               label?: string | null;
-              link?: string | null;
+              url?: string | null;
             };
             id?: string | null;
             blockName?: string | null;
@@ -420,7 +422,6 @@ export interface PagesSelect<T extends boolean = true> {
         credibility?:
           | T
           | {
-              heading?: T;
               stats?:
                 | T
                 | {
@@ -434,21 +435,24 @@ export interface PagesSelect<T extends boolean = true> {
         serviceshighlight?:
           | T
           | {
-              sectionTitle?: T;
-              subtitle?: T;
+              badge?: T;
+              heading?: T;
+              highlightedText?: T;
+              subheading?: T;
               services?:
                 | T
                 | {
+                    icon?: T;
                     title?: T;
                     description?: T;
-                    link?: T;
+                    url?: T;
                     id?: T;
                   };
               viewAllCta?:
                 | T
                 | {
                     label?: T;
-                    link?: T;
+                    url?: T;
                   };
               id?: T;
               blockName?: T;

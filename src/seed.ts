@@ -32,27 +32,30 @@ async function run() {
         label: 'Book an Appointment',
         url: '/contact',
       },
-      {
-        blockType: 'credibility',
-        heading: 'Trusted by Thousands of Patients',
-        stats: [
-          { value: '15+', label: 'Years Experience' },
-          { value: '10k+', label: 'Happy Smiles' },
-          { value: '5', label: 'Specialist Doctors' }
-        ]
-      },
-      {
-        blockType: 'serviceshighlight',
-        sectionTitle: 'Comprehensive care, one gentle clinic',
-        subtitle: 'From routine checkups to full smile transformations, every treatment is planned around your comfort and long-term oral health.',
-        services: [
-          { title: 'General Dentistry', description: 'Routine exams, cleanings, and preventive care.', link: '/services' },
-          { title: 'Cosmetic Dentistry', description: 'Veneers, bonding, and smile design.', link: '/services' },
-          { title: 'Dental Implants', description: 'Permanent, natural-looking tooth replacement.', link: '/services' },
-          { title: 'Orthodontics', description: 'Braces and clear aligners.', link: '/services' }
-        ],
-        viewAllCta: { label: 'View All Services', link: '/services' }
-      }
+      // Replace the old credibility and serviceshighlight blocks in seed.ts with this:
+          {
+            blockType: 'credibility',
+            stats: [
+              { value: '10,000+', label: 'Happy Patients' },
+              { value: '15+', label: 'Years Experience' },
+              { value: '5,000+', label: 'Successful Procedures' },
+              { value: '98%', label: 'Patient Satisfaction' }
+            ]
+          },
+          {
+            blockType: 'serviceshighlight',
+            badge: 'WHAT WE TREAT',
+            heading: 'Comprehensive care, ',
+            highlightedText: 'one gentle clinic',
+            subheading: 'From routine checkups to full smile transformations, every treatment is planned around your comfort and long-term oral health.',
+            services: [
+              { icon: 'Tooth', title: 'General Dentistry', description: 'Routine exams, cleanings, and preventive care to keep your whole family\'s smile healthy year-round.', url: '/services/general' },
+              { icon: 'Sparkles', title: 'Cosmetic Dentistry', description: 'Veneers, bonding, and smile design tailored to your facial features and personal style.', url: '/services/cosmetic' },
+              { icon: 'ShieldCheck', title: 'Dental Implants', description: 'Permanent, natural-looking tooth replacement using precision-guided implant technology.', url: '/services/implants' },
+              { icon: 'Eye', title: 'Orthodontics', description: 'Braces and clear aligners that straighten teeth discreetly, at any age.', url: '/services/ortho' }
+            ],
+            viewAllCta: { label: 'View All Services', url: '/services' }
+          }
     ]
   })
 
