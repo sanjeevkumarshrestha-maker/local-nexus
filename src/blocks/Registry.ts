@@ -66,4 +66,57 @@ export const ServicesHighlight: Block = {
       ]
     }
   ]
-}
+};
+export const WhyChooseUsBlock = {
+  slug: 'whychooseus', // This maps to your BlockRenderer!
+  labels: {
+    singular: 'Why Choose Us Section',
+    plural: 'Why Choose Us Sections',
+  },
+  fields: [
+    {
+      name: 'badge',
+      type: 'text',
+      label: 'Small Badge Text (e.g., WHY PERFECT SMILE)',
+    },
+    {
+      name: 'heading',
+      type: 'text',
+      label: 'Main Heading',
+      required: true,
+    },
+    {
+      name: 'subheading',
+      type: 'textarea',
+      label: 'Subtitle/Description',
+    },
+    {
+      name: 'image_url',
+      type: 'text',
+      label: 'Image URL (Paste direct image web link)',
+    },
+    {
+      name: 'floatingStat',
+      type: 'group',
+      label: 'Floating Image Stat',
+      fields: [
+        { name: 'value', type: 'text', label: 'Stat Value (e.g., 15+)' },
+        { name: 'label', type: 'text', label: 'Stat Label (e.g., Years of trusted care)' },
+      ],
+    },
+    {
+      name: 'features',
+      type: 'array',
+      label: 'Feature Items',
+      fields: [
+        {
+          name: 'icon',
+          type: 'text',
+          label: 'Lucide Icon Name (Clock, Star, Heart, CheckCircle2, Shield, Briefcase)',
+        },
+        { name: 'title', type: 'text', required: true },
+        { name: 'description', type: 'textarea' },
+      ],
+    },
+  ],
+};
