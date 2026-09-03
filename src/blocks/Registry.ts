@@ -67,7 +67,7 @@ export const ServicesHighlight: Block = {
     }
   ]
 };
-export const WhyChooseUsBlock = {
+export const WhyChooseUsBlock: Block = {
   slug: 'whychooseus', // This maps to your BlockRenderer!
   labels: {
     singular: 'Why Choose Us Section',
