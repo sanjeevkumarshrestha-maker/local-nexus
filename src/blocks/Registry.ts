@@ -345,3 +345,33 @@ export const InnerPageHeaderBlock: Block = {
     { name: 'subheading', type: 'textarea', label: 'Subtitle/Description' },
   ]
 }
+export const WhyChooseUsBlock: Block = {
+  slug: 'whychooseus',
+  labels: { singular: 'Why Choose Us / Story', plural: 'Why Choose Us / Stories' },
+  fields: [
+    { name: 'anchor', type: 'text', label: 'Section ID' },
+    { name: 'eyebrow', type: 'text', label: 'Eyebrow Text' },
+    { name: 'heading', type: 'text', required: true, label: 'Main Heading' },
+    { name: 'subheading', type: 'textarea', label: 'Description/Paragraphs' },
+    { name: 'image_url', type: 'text', label: 'Image URL' },
+    {
+      name: 'floatingStat',
+      type: 'group',
+      label: 'Image Floating Badge (Optional)',
+      fields: [
+        { name: 'value', type: 'text', label: 'Stat Value (e.g. 2010)' },
+        { name: 'label', type: 'text', label: 'Stat Label' }
+      ]
+    },
+    {
+      name: 'features',
+      type: 'array',
+      label: 'Feature Checklist (Optional)',
+      fields: [
+        { name: 'icon', type: 'text' },
+        { name: 'title', type: 'text' },
+        { name: 'description', type: 'textarea' }
+      ]
+    }
+  ]
+}

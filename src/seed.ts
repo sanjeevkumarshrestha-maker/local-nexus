@@ -43,7 +43,6 @@ async function run() {
   floating_card_1: { icon: 'CheckCircle2', title: 'Pain-Free Care', description: 'Modern sedation options' },
   floating_card_2: { icon: 'Star', title: '4.9 / 5 Rating', description: '600+ Google reviews' }
 },
-      // Replace the old credibility and serviceshighlight blocks in seed.ts with this:
           {
             blockType: 'credibility',
             stats: [
@@ -222,14 +221,34 @@ async function run() {
     ]
   })
 
-  await upsertPage('about', {
+await upsertPage('about', {
     title: 'About Us',
     slug: 'about',
     blocks: [
       {
-        blockType: 'story',
-        heading: 'Our Mission at Perfect Smile',
-        content: 'To provide world-class dental care using state-of-the-art technology in a relaxing environment.',
+        blockType: 'innerheader',
+        breadcrumb: 'HOME / ABOUT',
+        badge: 'OUR STORY',
+        heading: 'Care Built on ',
+        highlightedText: 'Trust, Not Trends',
+        subheading: 'Perfect Smile Oral & Dental Clinic began with a simple idea: dental care should feel calm, honest, and genuinely centered on the patient. Here\'s how that idea has grown since 2010.'
+      },
+      {
+        blockType: 'credibility',
+        stats: [
+          { value: '10,000+', label: 'Happy Patients' },
+          { value: '15+', label: 'Years Experience' },
+          { value: '5,000+', label: 'Successful Procedures' },
+          { value: '98%', label: 'Patient Satisfaction' }
+        ]
+      },
+      {
+        blockType: 'whychooseus',
+        badge: 'OUR STORY',
+        heading: 'From a single chair to a full specialist clinic',
+        subheading: 'Perfect Smile opened its doors in Kuleshwor in 2010 as a small general practice with one dentist and a promise: every patient would be treated like family. Over 15 years, that promise has stayed the same even as the clinic has grown into a full specialist team spanning cosmetic dentistry, implants, orthodontics, and pediatric care.\n\nToday, Perfect Smile Oral & Dental Clinic Pvt. Ltd. is a registered dental care provider trusted by more than 10,000 patients across Kathmandu — but we still run on the same principle we started with: listen first, treat gently, and never rush a diagnosis.',
+        image_url: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop',
+        floatingStat: { value: '2010', label: 'The year it all began' }
       }
     ]
   })
