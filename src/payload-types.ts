@@ -294,6 +294,23 @@ export interface Page {
             blockName?: string | null;
             blockType: 'dentistsgrid';
           }
+        | {
+            anchor?: string | null;
+            eyebrow?: string | null;
+            heading: string;
+            subheading?: string | null;
+            before_image_url: string;
+            after_image_url: string;
+            before_label?: string | null;
+            after_label?: string | null;
+            viewAllCta?: {
+              label?: string | null;
+              url?: string | null;
+            };
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'smilegallery';
+          }
       )[]
     | null;
   updatedAt: string;
@@ -546,6 +563,26 @@ export interface PagesSelect<T extends boolean = true> {
                     image_url?: T;
                     id?: T;
                   };
+              viewAllCta?:
+                | T
+                | {
+                    label?: T;
+                    url?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        smilegallery?:
+          | T
+          | {
+              anchor?: T;
+              eyebrow?: T;
+              heading?: T;
+              subheading?: T;
+              before_image_url?: T;
+              after_image_url?: T;
+              before_label?: T;
+              after_label?: T;
               viewAllCta?:
                 | T
                 | {

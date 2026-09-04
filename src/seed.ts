@@ -114,6 +114,18 @@ async function run() {
     }
   ],
   viewAllCta: { label: 'Meet Our Full Team', url: '/dentists' }
+},
+{
+  blockType: 'smilegallery',
+  anchor: 'gallery',
+  eyebrow: 'REAL RESULTS',
+  heading: 'Before & After Smile Gallery',
+  subheading: 'Drag the slider to see the difference our treatments make. Every transformation is a real patient case.',
+  before_image_url: 'https://images.unsplash.com/photo-1590649880765-91b1956b8276?q=80&w=800&auto=format&fit=crop',
+  after_image_url: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop',
+  before_label: 'BEFORE',
+  after_label: 'AFTER',
+  viewAllCta: { label: 'View Smile Gallery', url: '/gallery' }
 }
     ]
   })

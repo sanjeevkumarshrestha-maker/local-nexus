@@ -177,3 +177,31 @@ export const SmileGalleryBlock: Block = {
     }
   ]
 }
+export const TrustSectionBlock: Block = {
+  slug: 'trustsection',
+  labels: { singular: 'Trust Section', plural: 'Trust Sections' },
+  fields: [
+    { name: 'eyebrow', type: 'text', label: 'Eyebrow Text (e.g., WHY PATIENTS TRUST US)' },
+    { name: 'heading', type: 'text', required: true, label: 'Main Heading' },
+    { name: 'subheading', type: 'textarea', label: 'Subtitle/Description' },
+    {
+      name: 'stats',
+      type: 'array',
+      label: 'Stat Cards',
+      minRows: 1,
+      fields: [
+        { name: 'icon', type: 'text', label: 'Lucide Icon Name' },
+        { name: 'value', type: 'text', label: 'Card Title (e.g., 15+ Years)' },
+        { name: 'label', type: 'textarea', label: 'Card Description' }
+      ]
+    },
+    {
+      name: 'badges',
+      type: 'array',
+      label: 'Bottom Badges',
+      fields: [
+        { name: 'label', type: 'text', label: 'Badge Text (e.g., Award - placeholder)' }
+      ]
+    }
+  ]
+};
