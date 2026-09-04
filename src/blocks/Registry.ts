@@ -120,3 +120,37 @@ export const WhyChooseUsBlock: Block = {
     },
   ],
 };
+export const DentistsGridBlock: Block = {
+  slug: 'dentistsgrid',
+  labels: { singular: 'Dentists Grid', plural: 'Dentists Grids' },
+  fields: [
+    { name: 'anchor', type: 'text', label: 'Section ID (e.g., dentists)', defaultValue: 'dentists' },
+    { name: 'eyebrow', type: 'text', label: 'Eyebrow Text (e.g., OUR TEAM)' },
+    { name: 'heading', type: 'text', label: 'Main Heading' },
+    { name: 'highlightedText', type: 'text', label: 'Highlighted Heading Text' },
+    { name: 'headingSuffix', type: 'text', label: 'Heading Suffix (Text after highlight)' },
+    { name: 'subheading', type: 'textarea', label: 'Subtitle/Description' },
+    {
+      name: 'dentists',
+      type: 'array',
+      label: 'Dentists',
+      minRows: 1,
+      fields: [
+        { name: 'name', type: 'text', required: true },
+        { name: 'role', type: 'text' },
+        { name: 'qualification', type: 'text' },
+        { name: 'experience', type: 'text' },
+        { name: 'image_url', type: 'text', required: true, label: 'Image URL' }
+      ]
+    },
+    {
+      name: 'viewAllCta',
+      type: 'group',
+      label: 'Call to Action',
+      fields: [
+        { name: 'label', type: 'text' },
+        { name: 'url', type: 'text' }
+      ]
+    }
+  ]
+}

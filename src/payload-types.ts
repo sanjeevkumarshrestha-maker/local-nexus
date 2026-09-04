@@ -248,6 +248,27 @@ export interface Page {
             blockName?: string | null;
             blockType: 'serviceshighlight';
           }
+        | {
+            badge?: string | null;
+            heading: string;
+            subheading?: string | null;
+            image_url?: string | null;
+            floatingStat?: {
+              value?: string | null;
+              label?: string | null;
+            };
+            features?:
+              | {
+                  icon?: string | null;
+                  title: string;
+                  description?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'whychooseus';
+          }
       )[]
     | null;
   updatedAt: string;
@@ -453,6 +474,30 @@ export interface PagesSelect<T extends boolean = true> {
                 | {
                     label?: T;
                     url?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        whychooseus?:
+          | T
+          | {
+              badge?: T;
+              heading?: T;
+              subheading?: T;
+              image_url?: T;
+              floatingStat?:
+                | T
+                | {
+                    value?: T;
+                    label?: T;
+                  };
+              features?:
+                | T
+                | {
+                    icon?: T;
+                    title?: T;
+                    description?: T;
+                    id?: T;
                   };
               id?: T;
               blockName?: T;
