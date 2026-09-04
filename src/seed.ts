@@ -180,6 +180,20 @@ async function run() {
   }
 },
 {
+  blockType: 'bookingsection',
+  anchor: 'booking',
+  eyebrow: 'BOOK A VISIT',
+  heading: 'Your appointment, confirmed in minutes',
+  subheading: 'Tell us a little about what you need and preferred time — our front desk will confirm your slot the same day.',
+  benefits: [
+    { text: 'Instant confirmation on request' },
+    { text: 'Flexible morning & evening slots' },
+    { text: 'Free consultation for new patients' }
+  ],
+  whatsapp_cta: { label: 'Book via WhatsApp', url: 'https://wa.me/1234567890' },
+  form_disclaimer: "We'll confirm your slot by phone or WhatsApp within a few hours."
+},
+{
   blockType: 'contactsection',
   anchor: 'contact',
   eyebrow: 'VISIT US',

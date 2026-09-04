@@ -360,6 +360,26 @@ export interface Page {
             blockName?: string | null;
             blockType: 'testimonialcarousel';
           }
+        | {
+            anchor?: string | null;
+            eyebrow?: string | null;
+            heading: string;
+            subheading?: string | null;
+            benefits?:
+              | {
+                  text: string;
+                  id?: string | null;
+                }[]
+              | null;
+            whatsapp_cta?: {
+              label?: string | null;
+              url?: string | null;
+            };
+            form_disclaimer?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'bookingsection';
+          }
       )[]
     | null;
   updatedAt: string;
@@ -695,6 +715,29 @@ export interface PagesSelect<T extends boolean = true> {
                     icon_url?: T;
                     text?: T;
                   };
+              id?: T;
+              blockName?: T;
+            };
+        bookingsection?:
+          | T
+          | {
+              anchor?: T;
+              eyebrow?: T;
+              heading?: T;
+              subheading?: T;
+              benefits?:
+                | T
+                | {
+                    text?: T;
+                    id?: T;
+                  };
+              whatsapp_cta?:
+                | T
+                | {
+                    label?: T;
+                    url?: T;
+                  };
+              form_disclaimer?: T;
               id?: T;
               blockName?: T;
             };

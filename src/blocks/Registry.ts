@@ -4,13 +4,42 @@ export const HeroBlock: Block = {
   slug: 'hero',
   labels: { singular: 'Hero Section', plural: 'Hero Sections' },
   fields: [
-    { name: 'heading', type: 'text', required: true },
-    { name: 'subheading', type: 'textarea' },
-    { name: 'label', type: 'text' },
-    { name: 'url', type: 'text' },
+    { name: 'eyebrow', type: 'text', label: 'Eyebrow Text' },
+    { name: 'heading', type: 'text', required: true, label: 'Main Heading' },
+    { name: 'highlighted_text', type: 'text', label: 'Gradient Text' },
+    { name: 'heading_suffix', type: 'text', label: 'Text after gradient' },
+    { name: 'subheading', type: 'textarea', label: 'Subtitle/Description' },
+    {
+      name: 'primary_cta',
+      type: 'group',
+      fields: [{ name: 'label', type: 'text' }, { name: 'url', type: 'text' }]
+    },
+    {
+      name: 'secondary_cta',
+      type: 'group',
+      fields: [{ name: 'label', type: 'text' }, { name: 'url', type: 'text' }]
+    },
+    {
+      name: 'stats',
+      type: 'array',
+      label: 'Bottom Stats',
+      fields: [{ name: 'value', type: 'text' }, { name: 'label', type: 'text' }]
+    },
+    { name: 'image_url', type: 'text', required: true, label: 'Main Image URL' },
+    {
+      name: 'floating_card_1',
+      type: 'group',
+      label: 'Top Left Floating Card',
+      fields: [{ name: 'icon', type: 'text' }, { name: 'title', type: 'text' }, { name: 'description', type: 'text' }]
+    },
+    {
+      name: 'floating_card_2',
+      type: 'group',
+      label: 'Bottom Right Floating Card',
+      fields: [{ name: 'icon', type: 'text' }, { name: 'title', type: 'text' }, { name: 'description', type: 'text' }]
+    }
   ],
 }
-
 export const StoryBlock: Block = {
   slug: 'story',
   labels: { singular: 'Story Block', plural: 'Story Blocks' },
