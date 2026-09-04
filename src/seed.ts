@@ -197,19 +197,12 @@ async function run() {
     slug: 'header',
     data: {
       logo_text: 'Perfect Smile',
+      logo_url: '', // Add a direct image link here if you want a visual logo instead of text
       nav_links: [
-        { label: 'Home', link: '/' },
-        {
-          label: 'Services',
-          link: '/services',
-          mega_items: [
-            { label: 'General Dentistry', link: '/services/general', description: 'Routine care & checkups' },
-            { label: 'Cosmetic', link: '/services/cosmetic', description: 'Veneers & whitening' },
-            { label: 'Implants', link: '/services/implants', description: 'Permanent replacement' }
-          ]
-        },
-        { label: 'About Us', link: '/about' },
-        { label: 'Smile Gallery', link: '/gallery' }
+        { label: 'Home', url: '/' },
+        { label: 'Services', url: '/services' },
+        { label: 'About Us', url: '/about' },
+        { label: 'Smile Gallery', url: '/gallery' }
       ],
       secondary_cta_text: '(01) 456-7890',
       secondary_cta_link: 'tel:014567890',

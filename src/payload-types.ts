@@ -791,27 +791,19 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
  */
 export interface Header {
   id: string;
-  logo_text?: string | null;
   logo_url?: string | null;
+  logo_text?: string | null;
   nav_links?:
     | {
         label: string;
-        link: string;
-        mega_items?:
-          | {
-              label: string;
-              link: string;
-              description?: string | null;
-              id?: string | null;
-            }[]
-          | null;
+        url: string;
         id?: string | null;
       }[]
     | null;
-  secondary_cta_text?: string | null;
-  secondary_cta_link?: string | null;
   cta_text?: string | null;
   cta_link?: string | null;
+  secondary_cta_text?: string | null;
+  secondary_cta_link?: string | null;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -873,27 +865,19 @@ export interface Footer {
  * via the `definition` "header_select".
  */
 export interface HeaderSelect<T extends boolean = true> {
-  logo_text?: T;
   logo_url?: T;
+  logo_text?: T;
   nav_links?:
     | T
     | {
         label?: T;
-        link?: T;
-        mega_items?:
-          | T
-          | {
-              label?: T;
-              link?: T;
-              description?: T;
-              id?: T;
-            };
+        url?: T;
         id?: T;
       };
-  secondary_cta_text?: T;
-  secondary_cta_link?: T;
   cta_text?: T;
   cta_link?: T;
+  secondary_cta_text?: T;
+  secondary_cta_link?: T;
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;

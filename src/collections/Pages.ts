@@ -1,6 +1,6 @@
 import type { CollectionConfig } from 'payload'
 import { DetailedServicesBlock } from '../blocks/DetailedServices'
-import { HeroBlock, StoryBlock, CredibilityBlock, ServicesHighlight, WhyChooseUsBlock, DentistsGridBlock, SmileGalleryBlock, TrustSectionBlock, TestimonialCarouselBlock, ContactSectionBlock } from '../blocks/Registry'
+import { HeroBlock, StoryBlock, CredibilityBlock, ServicesHighlight, WhyChooseUsBlock, DentistsGridBlock, SmileGalleryBlock, ContactSectionBlock, TestimonialCarouselBlock } from '../blocks/Registry'
 
 export const Pages: CollectionConfig = {
   slug: 'pages',
@@ -27,9 +27,8 @@ export const Pages: CollectionConfig = {
         WhyChooseUsBlock,
         DentistsGridBlock,
         SmileGalleryBlock,
-        TrustSectionBlock,
-        TestimonialCarouselBlock,
         ContactSectionBlock,
+        TestimonialCarouselBlock,
       ],
     },
   ],
