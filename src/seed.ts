@@ -147,6 +147,7 @@ async function run() {
 },
 {
   blockType: 'testimonialcarousel',
+  anchor: 'testimonials',
   eyebrow: 'PATIENT STORIES',
   heading: 'Loved by Families Across Kathmandu',
   subheading: 'Hear directly from patients who trusted us with their smiles.',

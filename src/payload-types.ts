@@ -312,50 +312,6 @@ export interface Page {
             blockType: 'smilegallery';
           }
         | {
-            eyebrow?: string | null;
-            heading: string;
-            subheading?: string | null;
-            stats?:
-              | {
-                  icon?: string | null;
-                  value?: string | null;
-                  label?: string | null;
-                  id?: string | null;
-                }[]
-              | null;
-            badges?:
-              | {
-                  label?: string | null;
-                  id?: string | null;
-                }[]
-              | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'trustsection';
-          }
-        | {
-            eyebrow?: string | null;
-            heading: string;
-            subheading?: string | null;
-            reviews?:
-              | {
-                  quote: string;
-                  author_name: string;
-                  author_role?: string | null;
-                  avatar_url?: string | null;
-                  rating?: number | null;
-                  id?: string | null;
-                }[]
-              | null;
-            trust_badge?: {
-              icon_url?: string | null;
-              text?: string | null;
-            };
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'testimonialcarousel';
-          }
-        | {
             anchor?: string | null;
             eyebrow?: string | null;
             heading: string;
@@ -380,6 +336,29 @@ export interface Page {
             id?: string | null;
             blockName?: string | null;
             blockType: 'contactsection';
+          }
+        | {
+            anchor?: string | null;
+            eyebrow?: string | null;
+            heading: string;
+            subheading?: string | null;
+            reviews?:
+              | {
+                  quote: string;
+                  author_name: string;
+                  author_role?: string | null;
+                  avatar_url?: string | null;
+                  rating?: number | null;
+                  id?: string | null;
+                }[]
+              | null;
+            trust_badge?: {
+              icon_url?: string | null;
+              text?: string | null;
+            };
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'testimonialcarousel';
           }
       )[]
     | null;
@@ -662,54 +641,6 @@ export interface PagesSelect<T extends boolean = true> {
               id?: T;
               blockName?: T;
             };
-        trustsection?:
-          | T
-          | {
-              eyebrow?: T;
-              heading?: T;
-              subheading?: T;
-              stats?:
-                | T
-                | {
-                    icon?: T;
-                    value?: T;
-                    label?: T;
-                    id?: T;
-                  };
-              badges?:
-                | T
-                | {
-                    label?: T;
-                    id?: T;
-                  };
-              id?: T;
-              blockName?: T;
-            };
-        testimonialcarousel?:
-          | T
-          | {
-              eyebrow?: T;
-              heading?: T;
-              subheading?: T;
-              reviews?:
-                | T
-                | {
-                    quote?: T;
-                    author_name?: T;
-                    author_role?: T;
-                    avatar_url?: T;
-                    rating?: T;
-                    id?: T;
-                  };
-              trust_badge?:
-                | T
-                | {
-                    icon_url?: T;
-                    text?: T;
-                  };
-              id?: T;
-              blockName?: T;
-            };
         contactsection?:
           | T
           | {
@@ -737,6 +668,32 @@ export interface PagesSelect<T extends boolean = true> {
                 | {
                     label?: T;
                     url?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        testimonialcarousel?:
+          | T
+          | {
+              anchor?: T;
+              eyebrow?: T;
+              heading?: T;
+              subheading?: T;
+              reviews?:
+                | T
+                | {
+                    quote?: T;
+                    author_name?: T;
+                    author_role?: T;
+                    avatar_url?: T;
+                    rating?: T;
+                    id?: T;
+                  };
+              trust_badge?:
+                | T
+                | {
+                    icon_url?: T;
+                    text?: T;
                   };
               id?: T;
               blockName?: T;
