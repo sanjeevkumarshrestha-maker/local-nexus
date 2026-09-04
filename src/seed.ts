@@ -26,12 +26,23 @@ async function run() {
     slug: 'home',
     blocks: [
       {
-        blockType: 'hero',
-        heading: 'Advanced Dental Care in Kathmandu',
-        subheading: 'Experience painless dentistry and world-class treatments with Perfect Smile.',
-        label: 'Book an Appointment',
-        url: '/contact',
-      },
+          blockType: 'hero',
+          eyebrow: 'ESTD. 2010 · KULESHWOR, KATHMANDU',
+           heading: 'Creating Healthy, ',
+            highlighted_text: 'Beautiful Smiles',
+            heading_suffix: ' Since 2010',
+           subheading: 'Advanced dental care, modern technology, and compassionate treatment for the entire family — delivered in a calm, judgment-free clinic built around you.',
+            primary_cta: { label: 'Book Appointment', url: '/contact' },
+            secondary_cta: { label: 'Call Now', url: 'tel:015374234' },
+             stats: [
+             { value: 'Estd. 2010', label: 'Serving Kathmandu' },
+            { value: '10,000+', label: 'Trusted Patients' },
+            { value: '15+ Years', label: 'Specialist Experience' }
+  ],
+  image_url: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop',
+  floating_card_1: { icon: 'CheckCircle2', title: 'Pain-Free Care', description: 'Modern sedation options' },
+  floating_card_2: { icon: 'Star', title: '4.9 / 5 Rating', description: '600+ Google reviews' }
+},
       // Replace the old credibility and serviceshighlight blocks in seed.ts with this:
           {
             blockType: 'credibility',

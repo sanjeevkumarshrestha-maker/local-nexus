@@ -334,3 +334,14 @@ export const BookingSectionBlock: Block = {
     { name: 'form_disclaimer', type: 'text', label: 'Form Bottom Disclaimer' }
   ]
 }
+export const InnerPageHeaderBlock: Block = {
+  slug: 'innerheader',
+  labels: { singular: 'Inner Page Header', plural: 'Inner Page Headers' },
+  fields: [
+    { name: 'breadcrumb', type: 'text', label: 'Breadcrumbs (e.g., HOME / ABOUT)' },
+    { name: 'badge', type: 'text', label: 'Small Badge Text (e.g., OUR STORY)' },
+    { name: 'heading', type: 'text', required: true, label: 'Main Heading' },
+    { name: 'highlightedText', type: 'text', label: 'Italicized Text (e.g., Trust, Not Trends)' },
+    { name: 'subheading', type: 'textarea', label: 'Subtitle/Description' },
+  ]
+}

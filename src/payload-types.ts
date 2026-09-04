@@ -199,10 +199,37 @@ export interface Page {
             blockType: 'detailed_services';
           }
         | {
+            eyebrow?: string | null;
             heading: string;
+            highlighted_text?: string | null;
+            heading_suffix?: string | null;
             subheading?: string | null;
-            label?: string | null;
-            url?: string | null;
+            primary_cta?: {
+              label?: string | null;
+              url?: string | null;
+            };
+            secondary_cta?: {
+              label?: string | null;
+              url?: string | null;
+            };
+            stats?:
+              | {
+                  value?: string | null;
+                  label?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            image_url: string;
+            floating_card_1?: {
+              icon?: string | null;
+              title?: string | null;
+              description?: string | null;
+            };
+            floating_card_2?: {
+              icon?: string | null;
+              title?: string | null;
+              description?: string | null;
+            };
             id?: string | null;
             blockName?: string | null;
             blockType: 'hero';
@@ -536,10 +563,45 @@ export interface PagesSelect<T extends boolean = true> {
         hero?:
           | T
           | {
+              eyebrow?: T;
               heading?: T;
+              highlighted_text?: T;
+              heading_suffix?: T;
               subheading?: T;
-              label?: T;
-              url?: T;
+              primary_cta?:
+                | T
+                | {
+                    label?: T;
+                    url?: T;
+                  };
+              secondary_cta?:
+                | T
+                | {
+                    label?: T;
+                    url?: T;
+                  };
+              stats?:
+                | T
+                | {
+                    value?: T;
+                    label?: T;
+                    id?: T;
+                  };
+              image_url?: T;
+              floating_card_1?:
+                | T
+                | {
+                    icon?: T;
+                    title?: T;
+                    description?: T;
+                  };
+              floating_card_2?:
+                | T
+                | {
+                    icon?: T;
+                    title?: T;
+                    description?: T;
+                  };
               id?: T;
               blockName?: T;
             };
