@@ -144,6 +144,39 @@ async function run() {
     { label: 'Certification — placeholder' },
     { label: 'Membership — placeholder' }
   ]
+},
+{
+  blockType: 'testimonialcarousel',
+  eyebrow: 'PATIENT STORIES',
+  heading: 'Loved by Families Across Kathmandu',
+  subheading: 'Hear directly from patients who trusted us with their smiles.',
+  reviews: [
+    {
+      quote: 'Whitening results were better than I expected, and the booking process on WhatsApp was so easy.',
+      author_name: 'Anisha Gurung',
+      author_role: 'Cosmetic Patient',
+      avatar_url: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop',
+      rating: 5
+    },
+    {
+      quote: 'The dental implant procedure was completely painless. Dr. Michael and his team are true professionals.',
+      author_name: 'Rajesh Shrestha',
+      author_role: 'Implant Patient',
+      avatar_url: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=200&auto=format&fit=crop',
+      rating: 5
+    },
+    {
+      quote: 'My kids actually love coming to the dentist now. The pediatric team is incredibly gentle and patient.',
+      author_name: 'Sarah Thapa',
+      author_role: 'Pediatric Parent',
+      avatar_url: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop',
+      rating: 5
+    }
+  ],
+  trust_badge: {
+    icon_url: 'https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png',
+    text: '4.9 / 5 average rating from 600+ Google reviews'
+  }
 }
     ]
   })

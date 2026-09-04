@@ -333,6 +333,28 @@ export interface Page {
             blockName?: string | null;
             blockType: 'trustsection';
           }
+        | {
+            eyebrow?: string | null;
+            heading: string;
+            subheading?: string | null;
+            reviews?:
+              | {
+                  quote: string;
+                  author_name: string;
+                  author_role?: string | null;
+                  avatar_url?: string | null;
+                  rating?: number | null;
+                  id?: string | null;
+                }[]
+              | null;
+            trust_badge?: {
+              icon_url?: string | null;
+              text?: string | null;
+            };
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'testimonialcarousel';
+          }
       )[]
     | null;
   updatedAt: string;
@@ -633,6 +655,31 @@ export interface PagesSelect<T extends boolean = true> {
                 | {
                     label?: T;
                     id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        testimonialcarousel?:
+          | T
+          | {
+              eyebrow?: T;
+              heading?: T;
+              subheading?: T;
+              reviews?:
+                | T
+                | {
+                    quote?: T;
+                    author_name?: T;
+                    author_role?: T;
+                    avatar_url?: T;
+                    rating?: T;
+                    id?: T;
+                  };
+              trust_badge?:
+                | T
+                | {
+                    icon_url?: T;
+                    text?: T;
                   };
               id?: T;
               blockName?: T;
