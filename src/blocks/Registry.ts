@@ -40,6 +40,7 @@ export const HeroBlock: Block = {
     }
   ],
 }
+
 export const StoryBlock: Block = {
   slug: 'story',
   labels: { singular: 'Story Block', plural: 'Story Blocks' },
@@ -95,60 +96,8 @@ export const ServicesHighlight: Block = {
       ]
     }
   ]
-};
-export const WhyChooseUsBlock: Block = {
-  slug: 'whychooseus', // This maps to your BlockRenderer!
-  labels: {
-    singular: 'Why Choose Us Section',
-    plural: 'Why Choose Us Sections',
-  },
-  fields: [
-    {
-      name: 'badge',
-      type: 'text',
-      label: 'Small Badge Text (e.g., WHY PERFECT SMILE)',
-    },
-    {
-      name: 'heading',
-      type: 'text',
-      label: 'Main Heading',
-      required: true,
-    },
-    {
-      name: 'subheading',
-      type: 'textarea',
-      label: 'Subtitle/Description',
-    },
-    {
-      name: 'image_url',
-      type: 'text',
-      label: 'Image URL (Paste direct image web link)',
-    },
-    {
-      name: 'floatingStat',
-      type: 'group',
-      label: 'Floating Image Stat',
-      fields: [
-        { name: 'value', type: 'text', label: 'Stat Value (e.g., 15+)' },
-        { name: 'label', type: 'text', label: 'Stat Label (e.g., Years of trusted care)' },
-      ],
-    },
-    {
-      name: 'features',
-      type: 'array',
-      label: 'Feature Items',
-      fields: [
-        {
-          name: 'icon',
-          type: 'text',
-          label: 'Lucide Icon Name (Clock, Star, Heart, CheckCircle2, Shield, Briefcase)',
-        },
-        { name: 'title', type: 'text', required: true },
-        { name: 'description', type: 'textarea' },
-      ],
-    },
-  ],
-};
+}
+
 export const DentistsGridBlock: Block = {
   slug: 'dentistsgrid',
   labels: { singular: 'Dentists Grid', plural: 'Dentists Grids' },
@@ -183,6 +132,7 @@ export const DentistsGridBlock: Block = {
     }
   ]
 }
+
 export const SmileGalleryBlock: Block = {
   slug: 'smilegallery',
   labels: { singular: 'Smile Gallery', plural: 'Smile Galleries' },
@@ -206,6 +156,7 @@ export const SmileGalleryBlock: Block = {
     }
   ]
 }
+
 export const TrustSectionBlock: Block = {
   slug: 'trustsection',
   labels: { singular: 'Trust Section', plural: 'Trust Sections' },
@@ -234,6 +185,7 @@ export const TrustSectionBlock: Block = {
     }
   ]
 }
+
 export const TestimonialCarouselBlock: Block = {
   slug: 'testimonialcarousel',
   labels: { singular: 'Testimonial Carousel', plural: 'Testimonial Carousels' },
@@ -266,6 +218,7 @@ export const TestimonialCarouselBlock: Block = {
     }
   ]
 }
+
 export const ContactSectionBlock: Block = {
   slug: 'contactsection',
   labels: { singular: 'Contact Section', plural: 'Contact Sections' },
@@ -306,6 +259,7 @@ export const ContactSectionBlock: Block = {
     }
   ]
 }
+
 export const BookingSectionBlock: Block = {
   slug: 'bookingsection',
   labels: { singular: 'Booking Section', plural: 'Booking Sections' },
@@ -334,6 +288,7 @@ export const BookingSectionBlock: Block = {
     { name: 'form_disclaimer', type: 'text', label: 'Form Bottom Disclaimer' }
   ]
 }
+
 export const InnerPageHeaderBlock: Block = {
   slug: 'innerheader',
   labels: { singular: 'Inner Page Header', plural: 'Inner Page Headers' },
@@ -345,6 +300,7 @@ export const InnerPageHeaderBlock: Block = {
     { name: 'subheading', type: 'textarea', label: 'Subtitle/Description' },
   ]
 }
+
 export const WhyChooseUsBlock: Block = {
   slug: 'whychooseus',
   labels: { singular: 'Why Choose Us / Story', plural: 'Why Choose Us / Stories' },
