@@ -236,3 +236,43 @@ export const TestimonialCarouselBlock: Block = {
     }
   ]
 }
+export const ContactSectionBlock: Block = {
+  slug: 'contactsection',
+  labels: { singular: 'Contact Section', plural: 'Contact Sections' },
+  fields: [
+    { name: 'anchor', type: 'text', defaultValue: 'contact', label: 'Section ID' },
+    { name: 'eyebrow', type: 'text', label: 'Eyebrow Text (e.g., VISIT US)' },
+    { name: 'heading', type: 'text', required: true, label: 'Main Heading' },
+    { name: 'subheading', type: 'textarea', label: 'Subtitle/Description' },
+    { name: 'map_url', type: 'text', required: true, label: 'Google Maps Embed URL' },
+    {
+      name: 'contact_details',
+      type: 'array',
+      label: 'Contact Information',
+      minRows: 1,
+      fields: [
+        { name: 'icon', type: 'text', label: 'Icon (e.g., MapPin, Phone, Clock)' },
+        { name: 'title', type: 'text', required: true, label: 'Title (e.g., Address)' },
+        { name: 'description', type: 'textarea', required: true, label: 'Details' }
+      ]
+    },
+    {
+      name: 'primary_cta',
+      type: 'group',
+      label: 'Primary Button',
+      fields: [
+        { name: 'label', type: 'text' },
+        { name: 'url', type: 'text' }
+      ]
+    },
+    {
+      name: 'secondary_cta',
+      type: 'group',
+      label: 'Secondary Button',
+      fields: [
+        { name: 'label', type: 'text' },
+        { name: 'url', type: 'text' }
+      ]
+    }
+  ]
+}
