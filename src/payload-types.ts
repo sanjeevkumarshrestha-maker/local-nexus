@@ -355,6 +355,32 @@ export interface Page {
             blockName?: string | null;
             blockType: 'testimonialcarousel';
           }
+        | {
+            anchor?: string | null;
+            eyebrow?: string | null;
+            heading: string;
+            subheading?: string | null;
+            map_url: string;
+            contact_details?:
+              | {
+                  icon?: string | null;
+                  title: string;
+                  description: string;
+                  id?: string | null;
+                }[]
+              | null;
+            primary_cta?: {
+              label?: string | null;
+              url?: string | null;
+            };
+            secondary_cta?: {
+              label?: string | null;
+              url?: string | null;
+            };
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'contactsection';
+          }
       )[]
     | null;
   updatedAt: string;
@@ -680,6 +706,37 @@ export interface PagesSelect<T extends boolean = true> {
                 | {
                     icon_url?: T;
                     text?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        contactsection?:
+          | T
+          | {
+              anchor?: T;
+              eyebrow?: T;
+              heading?: T;
+              subheading?: T;
+              map_url?: T;
+              contact_details?:
+                | T
+                | {
+                    icon?: T;
+                    title?: T;
+                    description?: T;
+                    id?: T;
+                  };
+              primary_cta?:
+                | T
+                | {
+                    label?: T;
+                    url?: T;
+                  };
+              secondary_cta?:
+                | T
+                | {
+                    label?: T;
+                    url?: T;
                   };
               id?: T;
               blockName?: T;

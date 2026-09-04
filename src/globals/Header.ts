@@ -2,33 +2,24 @@ import type { GlobalConfig } from 'payload'
 
 export const Header: GlobalConfig = {
   slug: 'header',
-  label: 'Site Header',
-  access: { read: () => true },
+  access: {
+    read: () => true,
+  },
   fields: [
-    { name: 'logo_text', type: 'text' },
-    { name: 'logo_url', type: 'text' },
+    { name: 'logo_url', type: 'text', label: 'Logo Image URL' },
+    { name: 'logo_text', type: 'text', label: 'Logo Text (Fallback)', defaultValue: 'Perfect Smile' },
     {
       name: 'nav_links',
       type: 'array',
       label: 'Navigation Links',
       fields: [
         { name: 'label', type: 'text', required: true },
-        { name: 'link', type: 'text', required: true },
-        {
-          name: 'mega_items',
-          type: 'array',
-          label: 'Dropdown Sub-items',
-          fields: [
-            { name: 'label', type: 'text', required: true },
-            { name: 'link', type: 'text', required: true },
-            { name: 'description', type: 'text' },
-          ],
-        },
+        { name: 'url', type: 'text', required: true }
       ],
     },
-    { name: 'secondary_cta_text', type: 'text' },
-    { name: 'secondary_cta_link', type: 'text' },
-    { name: 'cta_text', type: 'text' },
-    { name: 'cta_link', type: 'text' },
+    { name: 'cta_text', type: 'text', label: 'Primary Button Text (e.g., Book Online)' },
+    { name: 'cta_link', type: 'text', label: 'Primary Button URL' },
+    { name: 'secondary_cta_text', type: 'text', label: 'Secondary Button Text (e.g., Phone Number)' },
+    { name: 'secondary_cta_link', type: 'text', label: 'Secondary Button URL' }
   ],
 }
