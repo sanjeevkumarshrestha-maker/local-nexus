@@ -1,6 +1,6 @@
 import type { CollectionConfig } from 'payload'
 import { DetailedServicesBlock } from '../blocks/DetailedServices'
-import { HeroBlock, StoryBlock, CredibilityBlock, ServicesHighlight, WhyChooseUsBlock } from '../blocks/Registry'
+import { HeroBlock, StoryBlock, CredibilityBlock, ServicesHighlight, WhyChooseUsBlock, DentistsGridBlock,  } from '../blocks/Registry'
 
 
 export const Pages: CollectionConfig = {
