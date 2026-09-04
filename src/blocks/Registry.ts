@@ -277,3 +277,31 @@ export const ContactSectionBlock: Block = {
     }
   ]
 }
+export const BookingSectionBlock: Block = {
+  slug: 'bookingsection',
+  labels: { singular: 'Booking Section', plural: 'Booking Sections' },
+  fields: [
+    { name: 'anchor', type: 'text', defaultValue: 'booking', label: 'Section ID' },
+    { name: 'eyebrow', type: 'text', label: 'Eyebrow Text (e.g., BOOK A VISIT)' },
+    { name: 'heading', type: 'text', required: true, label: 'Main Heading' },
+    { name: 'subheading', type: 'textarea', label: 'Subtitle/Description' },
+    {
+      name: 'benefits',
+      type: 'array',
+      label: 'Benefit Checklist',
+      fields: [
+        { name: 'text', type: 'text', required: true }
+      ]
+    },
+    {
+      name: 'whatsapp_cta',
+      type: 'group',
+      label: 'WhatsApp Button',
+      fields: [
+        { name: 'label', type: 'text' },
+        { name: 'url', type: 'text' }
+      ]
+    },
+    { name: 'form_disclaimer', type: 'text', label: 'Form Bottom Disclaimer' }
+  ]
+}

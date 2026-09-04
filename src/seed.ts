@@ -178,6 +178,21 @@ async function run() {
     icon_url: 'https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png',
     text: '4.9 / 5 average rating from 600+ Google reviews'
   }
+},
+{
+  blockType: 'contactsection',
+  anchor: 'contact',
+  eyebrow: 'VISIT US',
+  heading: 'Find Perfect Smile Clinic',
+  subheading: 'Located in the heart of Kuleshwor — easy to reach, with parking available on-site.',
+  map_url: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14130.927050965383!2d85.2929!3d27.6946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb185a5df9b945%3A0x6a2c9be958047913!2sKuleshwor%2C%20Kathmandu%2044600%2C%20Nepal!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus',
+  contact_details: [
+    { icon: 'MapPin', title: 'Address', description: 'Kuleshwor Awas Road, behind Nabil Bank, Kathmandu, Nepal, 44600' },
+    { icon: 'Phone', title: 'Phone', description: '01-5374234' },
+    { icon: 'Clock', title: 'Opening Hours', description: 'Sun - Fri: 9:00 AM - 7:00 PM | Sat: 10:00 AM - 2:00 PM' }
+  ],
+  primary_cta: { label: 'Call Clinic', url: 'tel:015374234' },
+  secondary_cta: { label: 'Full Contact Page', url: '/contact' }
 }
     ]
   })
