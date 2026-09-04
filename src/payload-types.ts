@@ -269,6 +269,31 @@ export interface Page {
             blockName?: string | null;
             blockType: 'whychooseus';
           }
+        | {
+            anchor?: string | null;
+            eyebrow?: string | null;
+            heading?: string | null;
+            highlightedText?: string | null;
+            headingSuffix?: string | null;
+            subheading?: string | null;
+            dentists?:
+              | {
+                  name: string;
+                  role?: string | null;
+                  qualification?: string | null;
+                  experience?: string | null;
+                  image_url: string;
+                  id?: string | null;
+                }[]
+              | null;
+            viewAllCta?: {
+              label?: string | null;
+              url?: string | null;
+            };
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'dentistsgrid';
+          }
       )[]
     | null;
   updatedAt: string;
@@ -498,6 +523,34 @@ export interface PagesSelect<T extends boolean = true> {
                     title?: T;
                     description?: T;
                     id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        dentistsgrid?:
+          | T
+          | {
+              anchor?: T;
+              eyebrow?: T;
+              heading?: T;
+              highlightedText?: T;
+              headingSuffix?: T;
+              subheading?: T;
+              dentists?:
+                | T
+                | {
+                    name?: T;
+                    role?: T;
+                    qualification?: T;
+                    experience?: T;
+                    image_url?: T;
+                    id?: T;
+                  };
+              viewAllCta?:
+                | T
+                | {
+                    label?: T;
+                    url?: T;
                   };
               id?: T;
               blockName?: T;

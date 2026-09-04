@@ -154,3 +154,26 @@ export const DentistsGridBlock: Block = {
     }
   ]
 }
+export const SmileGalleryBlock: Block = {
+  slug: 'smilegallery',
+  labels: { singular: 'Smile Gallery', plural: 'Smile Galleries' },
+  fields: [
+    { name: 'anchor', type: 'text', label: 'Section ID (e.g., gallery)', defaultValue: 'gallery' },
+    { name: 'eyebrow', type: 'text', label: 'Eyebrow Text (e.g., REAL RESULTS)' },
+    { name: 'heading', type: 'text', required: true, label: 'Main Heading' },
+    { name: 'subheading', type: 'textarea', label: 'Subtitle/Description' },
+    { name: 'before_image_url', type: 'text', required: true, label: 'Before Image URL' },
+    { name: 'after_image_url', type: 'text', required: true, label: 'After Image URL' },
+    { name: 'before_label', type: 'text', defaultValue: 'Before' },
+    { name: 'after_label', type: 'text', defaultValue: 'After' },
+    {
+      name: 'viewAllCta',
+      type: 'group',
+      label: 'Call to Action',
+      fields: [
+        { name: 'label', type: 'text' },
+        { name: 'url', type: 'text' }
+      ]
+    }
+  ]
+}
