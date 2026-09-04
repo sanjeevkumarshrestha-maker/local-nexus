@@ -311,6 +311,28 @@ export interface Page {
             blockName?: string | null;
             blockType: 'smilegallery';
           }
+        | {
+            eyebrow?: string | null;
+            heading: string;
+            subheading?: string | null;
+            stats?:
+              | {
+                  icon?: string | null;
+                  value?: string | null;
+                  label?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            badges?:
+              | {
+                  label?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'trustsection';
+          }
       )[]
     | null;
   updatedAt: string;
@@ -588,6 +610,29 @@ export interface PagesSelect<T extends boolean = true> {
                 | {
                     label?: T;
                     url?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        trustsection?:
+          | T
+          | {
+              eyebrow?: T;
+              heading?: T;
+              subheading?: T;
+              stats?:
+                | T
+                | {
+                    icon?: T;
+                    value?: T;
+                    label?: T;
+                    id?: T;
+                  };
+              badges?:
+                | T
+                | {
+                    label?: T;
+                    id?: T;
                   };
               id?: T;
               blockName?: T;

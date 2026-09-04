@@ -205,3 +205,34 @@ export const TrustSectionBlock: Block = {
     }
   ]
 };
+export const TestimonialCarouselBlock: Block = {
+  slug: 'testimonialcarousel',
+  labels: { singular: 'Testimonial Carousel', plural: 'Testimonial Carousels' },
+  fields: [
+    { name: 'eyebrow', type: 'text', label: 'Eyebrow Text (e.g., PATIENT STORIES)' },
+    { name: 'heading', type: 'text', required: true, label: 'Main Heading' },
+    { name: 'subheading', type: 'textarea', label: 'Subtitle/Description' },
+    {
+      name: 'reviews',
+      type: 'array',
+      label: 'Reviews',
+      minRows: 1,
+      fields: [
+        { name: 'quote', type: 'textarea', required: true, label: 'Patient Quote' },
+        { name: 'author_name', type: 'text', required: true, label: 'Patient Name' },
+        { name: 'author_role', type: 'text', label: 'Patient Role or Treatment' },
+        { name: 'avatar_url', type: 'text', label: 'Avatar Image URL' },
+        { name: 'rating', type: 'number', defaultValue: 5, min: 1, max: 5, label: 'Star Rating (1-5)' }
+      ]
+    },
+    {
+      name: 'trust_badge',
+      type: 'group',
+      label: 'Trust Badge (Bottom of Section)',
+      fields: [
+        { name: 'icon_url', type: 'text', label: 'Badge Icon URL (e.g., Google Logo image link)' },
+        { name: 'text', type: 'text', label: 'Badge Text' }
+      ]
+    }
+  ]
+}

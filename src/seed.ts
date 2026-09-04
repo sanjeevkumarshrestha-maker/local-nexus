@@ -126,6 +126,24 @@ async function run() {
   before_label: 'BEFORE',
   after_label: 'AFTER',
   viewAllCta: { label: 'View Smile Gallery', url: '/gallery' }
+},
+{
+  blockType: 'trustsection',
+  eyebrow: 'WHY PATIENTS TRUST US',
+  heading: 'Credibility you can verify',
+  subheading: 'Every claim we make is backed by real experience, real certifications, and real patient outcomes.',
+  stats: [
+    { icon: 'Clock', value: '15+ Years', label: 'Serving Kathmandu since 2010' },
+    { icon: 'Star', value: 'Certified Professionals', label: 'Board-certified dentists, every discipline' },
+    { icon: 'Monitor', value: 'Modern Equipment', label: 'Digital X-ray, scanning & laser dentistry' },
+    { icon: 'Shield', value: 'Hygiene Standards', label: 'Hospital-grade sterilization protocols' },
+    { icon: 'CheckCircle2', value: '98% Satisfaction', label: 'Rated 4.9/5 across 600+ reviews' }
+  ],
+  badges: [
+    { label: 'Award — placeholder' },
+    { label: 'Certification — placeholder' },
+    { label: 'Membership — placeholder' }
+  ]
 }
     ]
   })
