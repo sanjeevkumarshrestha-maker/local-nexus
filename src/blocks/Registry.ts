@@ -351,3 +351,23 @@ export const MissionVisionBlock: Block = {
     }
   ]
 }
+export const TimelineBlock: Block = {
+  slug: 'timeline',
+  labels: { singular: 'Timeline', plural: 'Timelines' },
+  fields: [
+    { name: 'eyebrow', type: 'text', label: 'Eyebrow Text (e.g., OUR JOURNEY)' },
+    { name: 'heading', type: 'text', required: true, label: 'Main Heading' },
+    { name: 'subheading', type: 'textarea', label: 'Subtitle/Description' },
+    {
+      name: 'milestones',
+      type: 'array',
+      label: 'Milestones',
+      minRows: 1,
+      fields: [
+        { name: 'year', type: 'text', required: true, label: 'Year/Date (e.g., 2010)' },
+        { name: 'title', type: 'text', required: true, label: 'Title (e.g., Clinic Founded)' },
+        { name: 'description', type: 'textarea', label: 'Description' }
+      ]
+    }
+  ]
+}
