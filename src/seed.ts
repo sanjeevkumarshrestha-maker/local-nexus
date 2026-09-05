@@ -234,21 +234,22 @@ await upsertPage('about', {
         subheading: 'Perfect Smile Oral & Dental Clinic began with a simple idea: dental care should feel calm, honest, and genuinely centered on the patient. Here\'s how that idea has grown since 2010.'
       },
       {
-        blockType: 'credibility',
-        stats: [
-          { value: '10,000+', label: 'Happy Patients' },
-          { value: '15+', label: 'Years Experience' },
-          { value: '5,000+', label: 'Successful Procedures' },
-          { value: '98%', label: 'Patient Satisfaction' }
-        ]
-      },
-      {
         blockType: 'whychooseus',
-        badge: 'OUR STORY',
+        eyebrow: 'OUR STORY',
         heading: 'From a single chair to a full specialist clinic',
         subheading: 'Perfect Smile opened its doors in Kuleshwor in 2010 as a small general practice with one dentist and a promise: every patient would be treated like family. Over 15 years, that promise has stayed the same even as the clinic has grown into a full specialist team spanning cosmetic dentistry, implants, orthodontics, and pediatric care.\n\nToday, Perfect Smile Oral & Dental Clinic Pvt. Ltd. is a registered dental care provider trusted by more than 10,000 patients across Kathmandu — but we still run on the same principle we started with: listen first, treat gently, and never rush a diagnosis.',
         image_url: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop',
         floatingStat: { value: '2010', label: 'The year it all began' }
+      },
+      {
+        blockType: 'missionvision',
+        eyebrow: 'WHAT DRIVES US',
+        heading: 'Mission & Vision',
+        subheading: 'Two commitments that shape every decision we make, from the front desk to the treatment chair.',
+        items: [
+          { icon: 'Heart', title: 'Our Mission', description: 'To deliver advanced, compassionate dental care that is accessible to every family in Kathmandu — combining modern technology with the patience and warmth of a neighborhood clinic.' },
+          { icon: 'Eye', title: 'Our Vision', description: 'To be Nepal\'s most trusted dental clinic — recognized not just for clinical excellence, but for the way every patient is treated with dignity, clarity, and genuine care.' }
+        ]
       }
     ]
   })

@@ -331,3 +331,23 @@ export const WhyChooseUsBlock: Block = {
     }
   ]
 }
+export const MissionVisionBlock: Block = {
+  slug: 'missionvision',
+  labels: { singular: 'Mission & Vision', plural: 'Missions & Visions' },
+  fields: [
+    { name: 'eyebrow', type: 'text', label: 'Eyebrow Text' },
+    { name: 'heading', type: 'text', required: true, label: 'Main Heading' },
+    { name: 'subheading', type: 'textarea', label: 'Subtitle/Description' },
+    {
+      name: 'items',
+      type: 'array',
+      label: 'Cards',
+      minRows: 1,
+      fields: [
+        { name: 'icon', type: 'text', label: 'Icon (e.g., Heart, Eye)' },
+        { name: 'title', type: 'text', required: true },
+        { name: 'description', type: 'textarea' }
+      ]
+    }
+  ]
+}
