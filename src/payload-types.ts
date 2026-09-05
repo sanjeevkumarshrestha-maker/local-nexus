@@ -467,6 +467,21 @@ export interface Page {
             blockName?: string | null;
             blockType: 'technology';
           }
+        | {
+            eyebrow?: string | null;
+            heading: string;
+            subheading?: string | null;
+            images?:
+              | {
+                  image_url: string;
+                  label: string;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'imagegrid';
+          }
       )[]
     | null;
   updatedAt: string;
@@ -922,6 +937,22 @@ export interface PagesSelect<T extends boolean = true> {
                     icon?: T;
                     title?: T;
                     description?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        imagegrid?:
+          | T
+          | {
+              eyebrow?: T;
+              heading?: T;
+              subheading?: T;
+              images?:
+                | T
+                | {
+                    image_url?: T;
+                    label?: T;
                     id?: T;
                   };
               id?: T;

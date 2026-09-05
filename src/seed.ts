@@ -288,6 +288,38 @@ await upsertPage('about', {
           { value: 'Modern Equipment', label: 'Digital X-ray, scanning & laser dentistry' },
           { value: '98% Satisfaction', label: 'Rated 4.9/5 across 600+ reviews' }
         ]
+      },
+      {
+        blockType: 'imagegrid',
+        eyebrow: 'TAKE A LOOK INSIDE',
+        heading: 'Clinic Facilities',
+        subheading: 'A calm, modern space designed to put patients of every age at ease.',
+        images: [
+          { label: 'Reception & Waiting Lounge', image_url: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=800&auto=format&fit=crop' },
+          { label: 'Treatment Room', image_url: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop' },
+          { label: 'Sterilization Suite', image_url: 'https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?q=80&w=800&auto=format&fit=crop' },
+          { label: 'Digital Imaging Room', image_url: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=800&auto=format&fit=crop' },
+          { label: 'Pediatric Play Corner', image_url: 'https://images.unsplash.com/photo-1554558509-5eaf9a0398f6?q=80&w=800&auto=format&fit=crop' },
+          { label: 'Consultation Room', image_url: 'https://images.unsplash.com/photo-1584432810601-6c7f27d2362b?q=80&w=800&auto=format&fit=crop' }
+        ]
+      },
+      {
+        blockType: 'trustsection',
+        eyebrow: 'WHY PATIENTS TRUST US',
+        heading: 'Credibility you can verify',
+        subheading: 'Every claim we make is backed by real experience, real certifications, and real patient outcomes.',
+        stats: [
+          { icon: 'Clock', value: '15+ Years', label: 'Serving Kathmandu since 2010' },
+          { icon: 'Star', value: 'Certified Professionals', label: 'Board-certified dentists, every discipline' },
+          { icon: 'Monitor', value: 'Modern Equipment', label: 'Digital X-ray, scanning & laser dentistry' },
+          { icon: 'Shield', value: 'Hygiene Standards', label: 'Hospital-grade sterilization protocols' },
+          { icon: 'Check', value: '98% Satisfaction', label: 'Rated 4.9/5 across 600+ reviews' }
+        ],
+        badges: [
+          { label: 'Award — placeholder' },
+          { label: 'Certification — placeholder' },
+          { label: 'Professional Membership — placeholder' }
+        ]
       }
     ]
   })
