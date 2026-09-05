@@ -264,6 +264,30 @@ await upsertPage('about', {
           { year: '2023', title: 'Full Specialist Team Assembled', description: 'Orthodontics and oral & maxillofacial surgery join the practice, completing a full-service specialist team under one roof.' },
           { year: 'Present', title: '15+ Years, 10,000+ Smiles', description: 'Today, Perfect Smile serves families across Kathmandu with a 4.9/5 average rating and a team of board-certified specialists.' }
         ]
+      },
+      {
+        blockType: 'technology',
+        eyebrow: 'MODERN TECHNOLOGY',
+        heading: 'Equipment that supports precise, gentle care',
+        subheading: 'We continually invest in technology that reduces discomfort and improves diagnostic accuracy — because better tools mean better outcomes.',
+        image_url: 'https://images.unsplash.com/photo-1598300188904-6287d52746ad?q=80&w=800&auto=format&fit=crop',
+        features: [
+          { icon: 'MonitorSquare', title: 'Digital X-Rays', description: 'Up to 80% less radiation than traditional film X-rays.' },
+          { icon: 'ScanFace', title: 'Intraoral Scanning', description: 'Impression-free digital scans for crowns, aligners & implants.' },
+          { icon: 'Zap', title: 'Laser Dentistry', description: 'Precise, minimally invasive treatment for gums and soft tissue.' },
+          { icon: 'Crosshair', title: 'Guided Implant Planning', description: '3D-planned implant placement for predictable, precise results.' }
+        ]
+      },
+      {
+        blockType: 'credibility',
+        heading: 'Credibility you can verify',
+        subheading: 'Every claim we make is backed by real experience, real certifications, and real patient outcomes.',
+        stats: [
+          { value: '15+ Years', label: 'Serving Kathmandu since 2010' },
+          { value: 'Certified Professionals', label: 'Board-certified dentists, every discipline' },
+          { value: 'Modern Equipment', label: 'Digital X-ray, scanning & laser dentistry' },
+          { value: '98% Satisfaction', label: 'Rated 4.9/5 across 600+ reviews' }
+        ]
       }
     ]
   })

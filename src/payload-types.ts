@@ -276,7 +276,8 @@ export interface Page {
             blockType: 'serviceshighlight';
           }
         | {
-            badge?: string | null;
+            anchor?: string | null;
+            eyebrow?: string | null;
             heading: string;
             subheading?: string | null;
             image_url?: string | null;
@@ -287,7 +288,7 @@ export interface Page {
             features?:
               | {
                   icon?: string | null;
-                  title: string;
+                  title?: string | null;
                   description?: string | null;
                   id?: string | null;
                 }[]
@@ -406,6 +407,65 @@ export interface Page {
             id?: string | null;
             blockName?: string | null;
             blockType: 'bookingsection';
+          }
+        | {
+            breadcrumb?: string | null;
+            badge?: string | null;
+            heading: string;
+            highlightedText?: string | null;
+            subheading?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'innerheader';
+          }
+        | {
+            eyebrow?: string | null;
+            heading: string;
+            subheading?: string | null;
+            items?:
+              | {
+                  icon?: string | null;
+                  title: string;
+                  description?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'missionvision';
+          }
+        | {
+            eyebrow?: string | null;
+            heading: string;
+            subheading?: string | null;
+            milestones?:
+              | {
+                  year: string;
+                  title: string;
+                  description?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'timeline';
+          }
+        | {
+            eyebrow?: string | null;
+            heading: string;
+            subheading?: string | null;
+            image_url: string;
+            features?:
+              | {
+                  icon?: string | null;
+                  title: string;
+                  description?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'technology';
           }
       )[]
     | null;
@@ -654,7 +714,8 @@ export interface PagesSelect<T extends boolean = true> {
         whychooseus?:
           | T
           | {
-              badge?: T;
+              anchor?: T;
+              eyebrow?: T;
               heading?: T;
               subheading?: T;
               image_url?: T;
@@ -800,6 +861,69 @@ export interface PagesSelect<T extends boolean = true> {
                     url?: T;
                   };
               form_disclaimer?: T;
+              id?: T;
+              blockName?: T;
+            };
+        innerheader?:
+          | T
+          | {
+              breadcrumb?: T;
+              badge?: T;
+              heading?: T;
+              highlightedText?: T;
+              subheading?: T;
+              id?: T;
+              blockName?: T;
+            };
+        missionvision?:
+          | T
+          | {
+              eyebrow?: T;
+              heading?: T;
+              subheading?: T;
+              items?:
+                | T
+                | {
+                    icon?: T;
+                    title?: T;
+                    description?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        timeline?:
+          | T
+          | {
+              eyebrow?: T;
+              heading?: T;
+              subheading?: T;
+              milestones?:
+                | T
+                | {
+                    year?: T;
+                    title?: T;
+                    description?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        technology?:
+          | T
+          | {
+              eyebrow?: T;
+              heading?: T;
+              subheading?: T;
+              image_url?: T;
+              features?:
+                | T
+                | {
+                    icon?: T;
+                    title?: T;
+                    description?: T;
+                    id?: T;
+                  };
               id?: T;
               blockName?: T;
             };

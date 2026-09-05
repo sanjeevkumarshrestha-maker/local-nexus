@@ -392,3 +392,22 @@ export const TechnologyBlock: Block = {
     }
   ]
 }
+export const ImageGridBlock: Block = {
+  slug: 'imagegrid',
+  labels: { singular: 'Image Grid', plural: 'Image Grids' },
+  fields: [
+    { name: 'eyebrow', type: 'text', label: 'Eyebrow Text' },
+    { name: 'heading', type: 'text', required: true, label: 'Main Heading' },
+    { name: 'subheading', type: 'textarea', label: 'Subtitle/Description' },
+    {
+      name: 'images',
+      type: 'array',
+      label: 'Images',
+      minRows: 1,
+      fields: [
+        { name: 'image_url', type: 'text', required: true, label: 'Image URL' },
+        { name: 'label', type: 'text', required: true, label: 'Bottom Left Label (e.g., Treatment Room)' }
+      ]
+    }
+  ]
+}
