@@ -371,3 +371,24 @@ export const TimelineBlock: Block = {
     }
   ]
 }
+export const TechnologyBlock: Block = {
+  slug: 'technology',
+  labels: { singular: 'Technology Section', plural: 'Technology Sections' },
+  fields: [
+    { name: 'eyebrow', type: 'text', label: 'Eyebrow Text' },
+    { name: 'heading', type: 'text', required: true, label: 'Main Heading' },
+    { name: 'subheading', type: 'textarea', label: 'Subtitle/Description' },
+    { name: 'image_url', type: 'text', required: true, label: 'Image URL' },
+    {
+      name: 'features',
+      type: 'array',
+      label: 'Technology Features',
+      minRows: 1,
+      fields: [
+        { name: 'icon', type: 'text', label: 'Icon (e.g., MonitorSquare, ScanFace)' },
+        { name: 'title', type: 'text', required: true },
+        { name: 'description', type: 'textarea' }
+      ]
+    }
+  ]
+}

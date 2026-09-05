@@ -250,6 +250,20 @@ await upsertPage('about', {
           { icon: 'Heart', title: 'Our Mission', description: 'To deliver advanced, compassionate dental care that is accessible to every family in Kathmandu — combining modern technology with the patience and warmth of a neighborhood clinic.' },
           { icon: 'Eye', title: 'Our Vision', description: 'To be Nepal\'s most trusted dental clinic — recognized not just for clinical excellence, but for the way every patient is treated with dignity, clarity, and genuine care.' }
         ]
+      },
+      {
+        blockType: 'timeline',
+        eyebrow: 'OUR JOURNEY',
+        heading: '2010 → Present',
+        subheading: 'A look at the milestones that shaped Perfect Smile into the clinic it is today.',
+        milestones: [
+          { year: '2010', title: 'Clinic Founded in Kuleshwor', description: 'Perfect Smile opens as a small general dentistry practice with a single treatment chair and a commitment to patient-first care.' },
+          { year: '2014', title: 'Cosmetic & Restorative Wing Added', description: 'Growing demand for smile makeovers leads to the addition of a dedicated cosmetic dentistry specialist and expanded treatment rooms.' },
+          { year: '2017', title: 'Digital X-Ray & Implant Program Launched', description: 'Investment in digital imaging and guided implant technology brings precision-guided implants to Kuleshwor for the first time.' },
+          { year: '2020', title: '10,000th Patient Milestone', description: 'Perfect Smile crosses 10,000 patients treated, alongside the introduction of a dedicated pediatric dentistry program.' },
+          { year: '2023', title: 'Full Specialist Team Assembled', description: 'Orthodontics and oral & maxillofacial surgery join the practice, completing a full-service specialist team under one roof.' },
+          { year: 'Present', title: '15+ Years, 10,000+ Smiles', description: 'Today, Perfect Smile serves families across Kathmandu with a 4.9/5 average rating and a team of board-certified specialists.' }
+        ]
       }
     ]
   })

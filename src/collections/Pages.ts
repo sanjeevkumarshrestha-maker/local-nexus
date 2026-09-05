@@ -1,6 +1,6 @@
 import type { CollectionConfig } from 'payload'
 import { DetailedServicesBlock } from '../blocks/DetailedServices'
-import { HeroBlock, StoryBlock, CredibilityBlock, ServicesHighlight, WhyChooseUsBlock, DentistsGridBlock, SmileGalleryBlock, ContactSectionBlock, TestimonialCarouselBlock, BookingSectionBlock, InnerPageHeaderBlock, MissionVisionBlock, TimelineBlock} from '../blocks/Registry'
+import { HeroBlock, StoryBlock, CredibilityBlock, ServicesHighlight, WhyChooseUsBlock, DentistsGridBlock, SmileGalleryBlock, ContactSectionBlock, TestimonialCarouselBlock, BookingSectionBlock, InnerPageHeaderBlock, MissionVisionBlock, TimelineBlock, TechnologyBlock} from '../blocks/Registry'
 
 export const Pages: CollectionConfig = {
   slug: 'pages',
@@ -33,6 +33,7 @@ export const Pages: CollectionConfig = {
         InnerPageHeaderBlock,
         MissionVisionBlock,
         TimelineBlock,
+        TechnologyBlock,
       ],
     },
   ],
