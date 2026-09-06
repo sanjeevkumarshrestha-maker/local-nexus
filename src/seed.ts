@@ -405,7 +405,7 @@ async function run() {
     }
   })
   console.log('Updated Global: footer')
-await upsertPage('services', {
+  await upsertPage('services', {
     title: 'Services',
     slug: 'services',
     blocks: [
@@ -420,130 +420,121 @@ await upsertPage('services', {
       {
         blockType: 'detailedservices',
         eyebrow: 'FULL TREATMENT LIST',
-        heading: 'Every service, explained simply',      // <--- Added for CMS schema validation
-        headline: 'Every service, explained simply',     // <--- Kept for frontend component
-        subheading: 'Tap into the details below to see exactly what each treatment includes, how long it typically takes, and how to book it.', // <--- Added for CMS
-        paragraph: 'Tap into the details below to see exactly what each treatment includes, how long it typically takes, and how to book it.',    // <--- Kept for frontend
+        heading: 'Every service, ',
+        highlightedText: 'explained simply',
+        subheading: 'Tap into the details below to see exactly what each treatment includes, how long it typically takes, and how to book it.',
         services: [
           {
             icon: 'stethoscope',
-            image_url: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=800&auto=format&fit=crop',
+            image_url: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop',
             title: 'General Dentistry',
-            description: "Routine exams, professional cleanings, and preventive care to keep your whole family's smile healthy year-round. We focus on catching small issues before they become big ones.",
-            features: [
-              'Comprehensive oral exam & digital X-rays',
-              'Scaling and professional cleaning',
-              'Cavity checks & fluoride treatment',
-              'Personalized home-care plan'
+            description: "Routine exams, professional cleanings, and preventive care to keep your whole family's smile healthy year-round.",
+            checklist: [
+              { text: 'Comprehensive oral exam & digital X-rays' },
+              { text: 'Scaling and professional cleaning' },
+              { text: 'Cavity checks & fluoride treatment' },
+              { text: 'Personalized home-care plan' }
             ],
-            duration: '45–60 min',
-            cta_text: 'Book Checkup',
-            cta_href: '/contact'
+            visit_info: { label: 'Typical Visit', duration: '45–60 min' },
+            cta: { label: 'Book Checkup', url: '/contact' }
           },
           {
             icon: 'sparkles',
-            image_url: 'https://images.unsplash.com/photo-1590649880765-91b1956b8276?q=80&w=800&auto=format&fit=crop',
+            image_url: 'https://images.unsplash.com/photo-1606265752439-1ebeb127b63f?q=80&w=800&auto=format&fit=crop',
             title: 'Teeth Whitening',
-            description: 'Safe, dentist-supervised in-clinic and take-home whitening systems for a noticeably brighter smile — often visible after a single visit.',
-            features: [
-              'Shade assessment & consultation',
-              'In-chair laser whitening option',
-              'Custom take-home whitening trays',
-              'Sensitivity-friendly formulas'
+            description: 'Safe, dentist-supervised in-clinic and take-home whitening systems for a noticeably brighter smile.',
+            checklist: [
+              { text: 'Shade assessment & consultation' },
+              { text: 'In-chair laser whitening option' },
+              { text: 'Custom take-home whitening trays' },
+              { text: 'Sensitivity-friendly formulas' }
             ],
-            duration: '60–90 min',
-            cta_text: 'Brighten My Smile',
-            cta_href: '/contact'
+            visit_info: { label: 'Typical Visit', duration: '60–90 min' },
+            cta: { label: 'Brighten My Smile', url: '/contact' }
           },
           {
             icon: 'checkcircle2',
-            image_url: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800&auto=format&fit=crop',
+            image_url: 'https://images.unsplash.com/photo-1522844990619-4951c40f7eda?q=80&w=800&auto=format&fit=crop',
             title: 'Cosmetic Dentistry',
-            description: 'Veneers, bonding, and full smile design tailored to your facial features and personal style — because confidence starts with your smile.',
-            features: [
-              'Porcelain & composite veneers',
-              'Dental bonding & contouring',
-              'Digital smile design preview',
-              'Gum contouring where needed'
+            description: 'Veneers, bonding, and full smile design tailored to your facial features and personal style.',
+            checklist: [
+              { text: 'Porcelain & composite veneers' },
+              { text: 'Dental bonding & contouring' },
+              { text: 'Digital smile design preview' },
+              { text: 'Gum contouring where needed' }
             ],
-            duration: 'Multiple visits',
-            cta_text: 'Design My Smile',
-            cta_href: '/contact'
+            visit_info: { label: 'Typical Visit', duration: 'Multiple visits' },
+            cta: { label: 'Design My Smile', url: '/contact' }
           },
           {
             icon: 'shieldcheck',
-            image_url: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=800&auto=format&fit=crop',
+            image_url: 'https://images.unsplash.com/photo-1528114039593-4366cc08227d?q=80&w=800&auto=format&fit=crop',
             title: 'Dental Implants',
-            description: 'Permanent, natural-looking tooth replacement using precision-guided implant technology — built to look, feel, and function like your own teeth.',
-            features: [
-              '3D imaging & guided implant planning',
-              'Single-tooth & full-arch implants',
-              'Titanium & zirconia options',
-              'Long-term aftercare support'
+            description: 'Permanent, natural-looking tooth replacement using precision-guided implant technology.',
+            checklist: [
+              { text: '3D imaging & guided implant planning' },
+              { text: 'Single-tooth & full-arch implants' },
+              { text: 'Titanium & zirconia options' },
+              { text: 'Long-term aftercare support' }
             ],
-            duration: '2–4 visits',
-            cta_text: 'Ask About Implants',
-            cta_href: '/contact'
+            visit_info: { label: 'Typical Visit', duration: '2–4 visits' },
+            cta: { label: 'Ask About Implants', url: '/contact' }
           },
           {
             icon: 'plus',
-            image_url: 'https://images.unsplash.com/photo-1598300188904-6287d52746ad?q=80&w=800&auto=format&fit=crop',
+            image_url: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=800&auto=format&fit=crop',
             title: 'Root Canal Treatment',
-            description: 'Pain-free, microscope-assisted root canal therapy that saves your natural tooth and eliminates infection at the source.',
-            features: [
-              'Digital diagnosis & pain management',
-              'Microscope-assisted precision cleaning',
-              'Same-visit crown option available',
-              'Follow-up review included'
+            description: 'Pain-free, microscope-assisted root canal therapy that saves your natural tooth and eliminates infection.',
+            checklist: [
+              { text: 'Digital diagnosis & pain management' },
+              { text: 'Microscope-assisted precision cleaning' },
+              { text: 'Same-visit crown option available' },
+              { text: 'Follow-up review included' }
             ],
-            duration: '60–75 min',
-            cta_text: 'Relieve My Pain',
-            cta_href: '/contact'
+            visit_info: { label: 'Typical Visit', duration: '60–75 min' },
+            cta: { label: 'Relieve My Pain', url: '/contact' }
           },
           {
             icon: 'eye',
-            image_url: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop',
+            image_url: 'https://images.unsplash.com/photo-1527613426441-4da17471b66d?q=80&w=800&auto=format&fit=crop',
             title: 'Orthodontics',
-            description: 'Braces and clear aligners that straighten teeth discreetly, at any age — with regular progress check-ins built into your plan.',
-            features: [
-              'Metal & ceramic braces',
-              'Clear aligner therapy',
-              'Bite & jaw alignment assessment',
-              'Retention plan after treatment'
+            description: 'Braces and clear aligners that straighten teeth discreetly, at any age — with regular progress check-ins.',
+            checklist: [
+              { text: 'Metal & ceramic braces' },
+              { text: 'Clear aligner therapy' },
+              { text: 'Bite & jaw alignment assessment' },
+              { text: 'Retention plan after treatment' }
             ],
-            duration: '6–24 months',
-            cta_text: 'Start My Journey',
-            cta_href: '/contact'
+            visit_info: { label: 'Typical Visit', duration: '6–24 months' },
+            cta: { label: 'Start My Journey', url: '/contact' }
           },
           {
             icon: 'heart',
             image_url: 'https://images.unsplash.com/photo-1584432810601-6c7f27d2362b?q=80&w=800&auto=format&fit=crop',
             title: 'Pediatric Dentistry',
-            description: 'Gentle, friendly care that helps young patients build healthy habits early — in a calm environment designed to keep kids unafraid of the dentist.',
-            features: [
-              'Child-friendly first visits',
-              'Fluoride & sealant treatments',
-              'Habit counseling (thumb-sucking etc.)',
-              'Parent education on home care'
+            description: 'Gentle, friendly care that helps young patients build healthy habits early in a calm environment.',
+            checklist: [
+              { text: 'Child-friendly first visits' },
+              { text: 'Fluoride & sealant treatments' },
+              { text: 'Habit counseling (thumb-sucking etc.)' },
+              { text: 'Parent education on home care' }
             ],
-            duration: '30–45 min',
-            cta_text: 'Book for My Child',
-            cta_href: '/contact'
+            visit_info: { label: 'Typical Visit', duration: '30–45 min' },
+            cta: { label: 'Book for My Child', url: '/contact' }
           },
           {
             icon: 'zap',
-            image_url: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=800&auto=format&fit=crop',
+            image_url: 'https://images.unsplash.com/photo-1598300188904-6287d52746ad?q=80&w=800&auto=format&fit=crop',
             title: 'Emergency Dental Care',
-            description: 'Same-day appointments for dental pain, trauma, or urgent repairs — because dental emergencies never wait for a convenient time.',
-            features: [
-              'Same-day urgent appointments',
-              'Pain relief & trauma management',
-              'Broken/chipped tooth repair',
-              'After-hours WhatsApp triage'
+            description: 'Same-day appointments for dental pain, trauma, or urgent repairs — because emergencies never wait.',
+            checklist: [
+              { text: 'Same-day urgent appointments' },
+              { text: 'Pain relief & trauma management' },
+              { text: 'Broken/chipped tooth repair' },
+              { text: 'After-hours WhatsApp triage' }
             ],
-            duration: 'Same day',
-            cta_text: 'Get Emergency Care',
-            cta_href: '/contact'
+            visit_info: { label: 'Typical Visit', duration: 'Same day' },
+            cta: { label: 'Get Emergency Care', url: '/contact' }
           }
         ]
       },
@@ -613,6 +604,46 @@ await upsertPage('services', {
           }
         ],
         viewAllCta: { label: 'Book with Our Team', url: '/contact' }
+      },
+      {
+        blockType: 'bookingsection',
+        anchor: 'booking',
+        eyebrow: 'BOOK A VISIT',
+        heading: 'Your appointment, confirmed in minutes',
+        subheading: 'Tell us a little about what you need and preferred time — our front desk will confirm your slot the same day.',
+        benefits: [
+          { text: 'Instant confirmation on request' },
+          { text: 'Flexible morning & evening slots' },
+          { text: 'Free consultation for new patients' }
+        ],
+        whatsapp_cta: { label: 'Book via WhatsApp', url: 'https://wa.me/1234567890' },
+        form_disclaimer: "We'll confirm your slot by phone or WhatsApp within a few hours."
+      }
+    ]
+  })
+  await upsertPage('gallery', {
+    title: 'Smile Gallery',
+    slug: 'gallery',
+    blocks: [
+      {
+        blockType: 'innerheader',
+        breadcrumb: 'HOME / GALLERY',
+        badge: 'REAL RESULTS',
+        heading: 'Smile Transformations ',
+        highlightedText: 'You Can See',
+        subheading: 'Every before-and-after case shown here is a real Perfect Smile patient. Drag the slider, filter by treatment, and see the kind of results our team delivers every day.'
+      },
+      {
+        blockType: 'smilegallery',
+        anchor: 'gallery',
+        eyebrow: 'DRAG TO COMPARE',
+        heading: 'Before & After',
+        subheading: 'A featured smile transformation — drag the handle to see the difference.',
+        before_image_url: 'https://images.unsplash.com/photo-1590649880765-91b1956b8276?q=80&w=800&auto=format&fit=crop',
+        after_image_url: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop',
+        before_label: 'BEFORE',
+        after_label: 'AFTER'
+        // viewAllCta has been completely removed from here!
       }
     ]
   })

@@ -479,3 +479,33 @@ export const DetailedServicesBlock: Block = {
     }
   ]
 }
+export const FilterableGalleryBlock: Block = {
+  slug: 'filterablegallery',
+  labels: { singular: 'Filterable Gallery', plural: 'Filterable Galleries' },
+  fields: [
+    { name: 'eyebrow', type: 'text', label: 'Eyebrow Text (e.g., BROWSE BY TREATMENT)' },
+    { name: 'heading', type: 'text', required: true, label: 'Main Heading' },
+    { name: 'subheading', type: 'textarea', label: 'Subtitle/Description' },
+    {
+      name: 'categories',
+      type: 'array',
+      label: 'Filter Categories',
+      minRows: 1,
+      fields: [
+        { name: 'label', type: 'text', required: true, label: 'Category Name (e.g., Cosmetic)' },
+        { name: 'value', type: 'text', required: true, label: 'Category Value (e.g., cosmetic)' }
+      ]
+    },
+    {
+      name: 'images',
+      type: 'array',
+      label: 'Gallery Images',
+      minRows: 1,
+      fields: [
+        { name: 'image_url', type: 'text', required: true, label: 'Image URL' },
+        { name: 'label', type: 'text', required: true, label: 'Bottom Left Label' },
+        { name: 'category_value', type: 'text', required: true, label: 'Must match a Category Value (e.g., cosmetic)' }
+      ]
+    }
+  ]
+}
