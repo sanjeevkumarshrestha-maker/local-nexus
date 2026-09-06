@@ -411,3 +411,23 @@ export const ImageGridBlock: Block = {
     }
   ]
 }
+export const FeaturesGridBlock: Block = {
+  slug: 'featuresgrid',
+  labels: { singular: 'Features Grid', plural: 'Features Grids' },
+  fields: [
+    { name: 'eyebrow', type: 'text', label: 'Eyebrow Text' },
+    { name: 'heading', type: 'text', required: true, label: 'Main Heading' },
+    { name: 'subheading', type: 'textarea', label: 'Subtitle/Description' },
+    {
+      name: 'features',
+      type: 'array',
+      label: 'Feature Cards',
+      minRows: 1,
+      fields: [
+        { name: 'icon', type: 'text', label: 'Icon (e.g., Check, Heart, Star, Shield)' },
+        { name: 'title', type: 'text', required: true },
+        { name: 'description', type: 'textarea' }
+      ]
+    }
+  ]
+}
