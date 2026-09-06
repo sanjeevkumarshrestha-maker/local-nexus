@@ -411,39 +411,199 @@ await upsertPage('services', {
       {
         blockType: 'detailedservices',
         eyebrow: 'FULL TREATMENT LIST',
-        heading: 'Every service, ',
-        highlightedText: 'explained simply',
-        subheading: 'Tap into the details below to see exactly what each treatment includes, how long it typically takes, and how to book it.',
+        heading: 'Every service, explained simply',      // <--- Added for CMS schema validation
+        headline: 'Every service, explained simply',     // <--- Kept for frontend component
+        subheading: 'Tap into the details below to see exactly what each treatment includes, how long it typically takes, and how to book it.', // <--- Added for CMS
+        paragraph: 'Tap into the details below to see exactly what each treatment includes, how long it typically takes, and how to book it.',    // <--- Kept for frontend
         services: [
           {
             icon: 'stethoscope',
-            image_url: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop',
+            image_url: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=800&auto=format&fit=crop',
             title: 'General Dentistry',
             description: "Routine exams, professional cleanings, and preventive care to keep your whole family's smile healthy year-round. We focus on catching small issues before they become big ones.",
-            checklist: [
-              { text: 'Comprehensive oral exam & digital X-rays' },
-              { text: 'Scaling and professional cleaning' },
-              { text: 'Cavity checks & fluoride treatment' },
-              { text: 'Personalized home-care plan' }
+            features: [
+              'Comprehensive oral exam & digital X-rays',
+              'Scaling and professional cleaning',
+              'Cavity checks & fluoride treatment',
+              'Personalized home-care plan'
             ],
-            visit_info: { label: 'Typical Visit', duration: '45–60 min' },
-            cta: { label: 'Book Checkup', url: '/contact' }
+            duration: '45–60 min',
+            cta_text: 'Book Checkup',
+            cta_href: '/contact'
           },
           {
             icon: 'sparkles',
             image_url: 'https://images.unsplash.com/photo-1590649880765-91b1956b8276?q=80&w=800&auto=format&fit=crop',
             title: 'Teeth Whitening',
             description: 'Safe, dentist-supervised in-clinic and take-home whitening systems for a noticeably brighter smile — often visible after a single visit.',
-            checklist: [
-              { text: 'Shade assessment & consultation' },
-              { text: 'In-chair laser whitening option' },
-              { text: 'Custom take-home whitening trays' },
-              { text: 'Sensitivity-friendly formulas' }
+            features: [
+              'Shade assessment & consultation',
+              'In-chair laser whitening option',
+              'Custom take-home whitening trays',
+              'Sensitivity-friendly formulas'
             ],
-            visit_info: { label: 'Typical Visit', duration: '60–90 min' },
-            cta: { label: 'Brighten My Smile', url: '/contact' }
+            duration: '60–90 min',
+            cta_text: 'Brighten My Smile',
+            cta_href: '/contact'
+          },
+          {
+            icon: 'checkcircle2',
+            image_url: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800&auto=format&fit=crop',
+            title: 'Cosmetic Dentistry',
+            description: 'Veneers, bonding, and full smile design tailored to your facial features and personal style — because confidence starts with your smile.',
+            features: [
+              'Porcelain & composite veneers',
+              'Dental bonding & contouring',
+              'Digital smile design preview',
+              'Gum contouring where needed'
+            ],
+            duration: 'Multiple visits',
+            cta_text: 'Design My Smile',
+            cta_href: '/contact'
+          },
+          {
+            icon: 'shieldcheck',
+            image_url: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=800&auto=format&fit=crop',
+            title: 'Dental Implants',
+            description: 'Permanent, natural-looking tooth replacement using precision-guided implant technology — built to look, feel, and function like your own teeth.',
+            features: [
+              '3D imaging & guided implant planning',
+              'Single-tooth & full-arch implants',
+              'Titanium & zirconia options',
+              'Long-term aftercare support'
+            ],
+            duration: '2–4 visits',
+            cta_text: 'Ask About Implants',
+            cta_href: '/contact'
+          },
+          {
+            icon: 'plus',
+            image_url: 'https://images.unsplash.com/photo-1598300188904-6287d52746ad?q=80&w=800&auto=format&fit=crop',
+            title: 'Root Canal Treatment',
+            description: 'Pain-free, microscope-assisted root canal therapy that saves your natural tooth and eliminates infection at the source.',
+            features: [
+              'Digital diagnosis & pain management',
+              'Microscope-assisted precision cleaning',
+              'Same-visit crown option available',
+              'Follow-up review included'
+            ],
+            duration: '60–75 min',
+            cta_text: 'Relieve My Pain',
+            cta_href: '/contact'
+          },
+          {
+            icon: 'eye',
+            image_url: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop',
+            title: 'Orthodontics',
+            description: 'Braces and clear aligners that straighten teeth discreetly, at any age — with regular progress check-ins built into your plan.',
+            features: [
+              'Metal & ceramic braces',
+              'Clear aligner therapy',
+              'Bite & jaw alignment assessment',
+              'Retention plan after treatment'
+            ],
+            duration: '6–24 months',
+            cta_text: 'Start My Journey',
+            cta_href: '/contact'
+          },
+          {
+            icon: 'heart',
+            image_url: 'https://images.unsplash.com/photo-1584432810601-6c7f27d2362b?q=80&w=800&auto=format&fit=crop',
+            title: 'Pediatric Dentistry',
+            description: 'Gentle, friendly care that helps young patients build healthy habits early — in a calm environment designed to keep kids unafraid of the dentist.',
+            features: [
+              'Child-friendly first visits',
+              'Fluoride & sealant treatments',
+              'Habit counseling (thumb-sucking etc.)',
+              'Parent education on home care'
+            ],
+            duration: '30–45 min',
+            cta_text: 'Book for My Child',
+            cta_href: '/contact'
+          },
+          {
+            icon: 'zap',
+            image_url: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=800&auto=format&fit=crop',
+            title: 'Emergency Dental Care',
+            description: 'Same-day appointments for dental pain, trauma, or urgent repairs — because dental emergencies never wait for a convenient time.',
+            features: [
+              'Same-day urgent appointments',
+              'Pain relief & trauma management',
+              'Broken/chipped tooth repair',
+              'After-hours WhatsApp triage'
+            ],
+            duration: 'Same day',
+            cta_text: 'Get Emergency Care',
+            cta_href: '/contact'
           }
         ]
+      },
+      {
+        blockType: 'bookingsection',
+        anchor: 'booking',
+        eyebrow: 'BOOK A VISIT',
+        heading: 'Your appointment, confirmed in minutes',
+        subheading: 'Tell us a little about what you need and preferred time — our front desk will confirm your slot the same day.',
+        benefits: [
+          { text: 'Instant confirmation on request' },
+          { text: 'Flexible morning & evening slots' },
+          { text: 'Free consultation for new patients' }
+        ],
+        whatsapp_cta: { label: 'Book via WhatsApp', url: 'https://wa.me/1234567890' },
+        form_disclaimer: "We'll confirm your slot by phone or WhatsApp within a few hours."
+      }
+    ]
+  })
+  await upsertPage('dentists', {
+    title: 'Our Dentists',
+    slug: 'dentists',
+    blocks: [
+      {
+        blockType: 'innerheader',
+        breadcrumb: 'HOME / DENTISTS',
+        badge: 'OUR TEAM',
+        heading: 'Meet the Specialists ',
+        highlightedText: 'Behind Your Smile',
+        subheading: 'A team dedicated to precision, comfort, and genuinely caring for every patient who walks through our doors — across every stage of your dental journey.'
+      },
+      {
+        blockType: 'dentistsgrid',
+        anchor: 'team',
+        eyebrow: 'BOARD-CERTIFIED & CARING',
+        heading: 'Get to know ',
+        highlightedText: 'your care team',
+        subheading: 'Every dentist at Perfect Smile is board-certified in their discipline and continues ongoing training to keep your care current with the latest techniques.',
+        dentists: [
+          { 
+            name: 'Dr. Sarah Jenkins', 
+            role: 'Chief Orthodontist', 
+            qualification: 'DDS, MS Orthodontics', 
+            experience: '12+ Years', 
+            image_url: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=800&auto=format&fit=crop' 
+          },
+          { 
+            name: 'Dr. Michael Chen', 
+            role: 'Implant Specialist', 
+            qualification: 'DMD, Oral Surgery', 
+            experience: '15+ Years', 
+            image_url: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=800&auto=format&fit=crop' 
+          },
+          { 
+            name: 'Dr. Emily Carter', 
+            role: 'Pediatric Dentist', 
+            qualification: 'DDS, Pediatric Spec.', 
+            experience: '8+ Years', 
+            image_url: 'https://images.unsplash.com/photo-1594824436998-efa856b7c938?q=80&w=800&auto=format&fit=crop' 
+          },
+          { 
+            name: 'Dr. James Wilson', 
+            role: 'Cosmetic Dentist', 
+            qualification: 'DMD, AACD Member', 
+            experience: '10+ Years', 
+            image_url: 'https://images.unsplash.com/photo-1606265752439-1ebeb127b63f?q=80&w=800&auto=format&fit=crop' 
+          }
+        ],
+        viewAllCta: { label: 'Book with Our Team', url: '/contact' }
       }
     ]
   })

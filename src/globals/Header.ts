@@ -14,7 +14,17 @@ export const Header: GlobalConfig = {
       label: 'Navigation Links',
       fields: [
         { name: 'label', type: 'text', required: true },
-        { name: 'url', type: 'text', required: true }
+        { name: 'url', type: 'text', required: true },
+        {
+          name: 'mega_items',
+          type: 'array',
+          label: 'Mega Menu Dropdown Items',
+          fields: [
+            { name: 'label', type: 'text', required: true },
+            { name: 'url', type: 'text', required: true },
+            { name: 'description', type: 'text', label: 'Description' }
+          ]
+        }
       ],
     },
     { name: 'cta_text', type: 'text', label: 'Primary Button Text (e.g., Book Online)' },
