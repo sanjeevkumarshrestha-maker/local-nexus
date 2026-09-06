@@ -26,202 +26,202 @@ async function run() {
     slug: 'home',
     blocks: [
       {
-          blockType: 'hero',
-          eyebrow: 'ESTD. 2010 · KULESHWOR, KATHMANDU',
-           heading: 'Creating Healthy, ',
-            highlighted_text: 'Beautiful Smiles',
-            heading_suffix: ' Since 2010',
-           subheading: 'Advanced dental care, modern technology, and compassionate treatment for the entire family — delivered in a calm, judgment-free clinic built around you.',
-            primary_cta: { label: 'Book Appointment', url: '/contact' },
-            secondary_cta: { label: 'Call Now', url: 'tel:015374234' },
-             stats: [
-             { value: 'Estd. 2010', label: 'Serving Kathmandu' },
-            { value: '10,000+', label: 'Trusted Patients' },
-            { value: '15+ Years', label: 'Specialist Experience' }
-  ],
-  image_url: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop',
-  floating_card_1: { icon: 'CheckCircle2', title: 'Pain-Free Care', description: 'Modern sedation options' },
-  floating_card_2: { icon: 'Star', title: '4.9 / 5 Rating', description: '600+ Google reviews' }
-},
+        blockType: 'hero',
+        eyebrow: 'ESTD. 2010 · KULESHWOR, KATHMANDU',
+        heading: 'Creating Healthy, ',
+        highlighted_text: 'Beautiful Smiles',
+        heading_suffix: ' Since 2010',
+        subheading: 'Advanced dental care, modern technology, and compassionate treatment for the entire family — delivered in a calm, judgment-free clinic built around you.',
+        primary_cta: { label: 'Book Appointment', url: '/contact' },
+        secondary_cta: { label: 'Call Now', url: 'tel:015374234' },
+        stats: [
+          { value: 'Estd. 2010', label: 'Serving Kathmandu' },
+          { value: '10,000+', label: 'Trusted Patients' },
+          { value: '15+ Years', label: 'Specialist Experience' }
+        ],
+        image_url: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop',
+        floating_card_1: { icon: 'CheckCircle2', title: 'Pain-Free Care', description: 'Modern sedation options' },
+        floating_card_2: { icon: 'Star', title: '4.9 / 5 Rating', description: '600+ Google reviews' }
+      },
+      {
+        blockType: 'credibility',
+        stats: [
+          { value: '10,000+', label: 'Happy Patients' },
+          { value: '15+', label: 'Years Experience' },
+          { value: '5,000+', label: 'Successful Procedures' },
+          { value: '98%', label: 'Patient Satisfaction' }
+        ]
+      },
+      {
+        blockType: 'serviceshighlight',
+        badge: 'WHAT WE TREAT',
+        heading: 'Comprehensive care, ',
+        highlightedText: 'one gentle clinic',
+        subheading: 'From routine checkups to full smile transformations, every treatment is planned around your comfort and long-term oral health.',
+        services: [
+          { icon: 'Tooth', title: 'General Dentistry', description: 'Routine exams, cleanings, and preventive care to keep your whole family\'s smile healthy year-round.', url: '/services/general' },
+          { icon: 'Sparkles', title: 'Cosmetic Dentistry', description: 'Veneers, bonding, and smile design tailored to your facial features and personal style.', url: '/services/cosmetic' },
+          { icon: 'ShieldCheck', title: 'Dental Implants', description: 'Permanent, natural-looking tooth replacement using precision-guided implant technology.', url: '/services/implants' },
+          { icon: 'Eye', title: 'Orthodontics', description: 'Braces and clear aligners that straighten teeth discreetly, at any age.', url: '/services/ortho' }
+        ],
+        viewAllCta: { label: 'View All Services', url: '/services' }
+      },
+      {
+        blockType: 'whychooseus',
+        badge: 'WHY PERFECT SMILE',
+        heading: 'Care that feels as good as it looks',
+        subheading: 'Every detail of your visit — from the technology we use to the way our team explains your treatment — is designed to earn your trust from the first appointment.',
+        image_url: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop',
+        floatingStat: {
+          value: '15+',
+          label: 'Years of trusted care'
+        },
+        features: [
+          { icon: 'Clock', title: 'Modern Technology', description: 'Digital X-rays, intraoral scanning, and laser dentistry.' },
+          { icon: 'Star', title: 'Experienced Specialists', description: 'Board-certified dentists across every discipline.' },
+          { icon: 'Heart', title: 'Pain-Free Procedures', description: 'Gentle techniques and sedation options for anxious patients.' },
+          { icon: 'CheckCircle2', title: 'Personalized Care', description: 'Treatment plans built around your goals and budget.' },
+          { icon: 'Shield', title: 'Hygienic Environment', description: 'Hospital-grade sterilization for every instrument, every time.' },
+          { icon: 'Briefcase', title: 'Affordable Plans', description: 'Transparent pricing and flexible payment options.' }
+        ]
+      },
+      {
+        blockType: 'dentistsgrid',
+        anchor: 'dentists',
+        eyebrow: 'OUR EXPERTS',
+        heading: 'Meet our team of',
+        highlightedText: 'specialist doctors',
+        headingSuffix: 'in Kathmandu',
+        subheading: 'Our board-certified dentists bring decades of combined experience to ensure you receive the highest standard of painless, precision care.',
+        dentists: [
+          { 
+            name: 'Dr. Sarah Jenkins', 
+            role: 'Chief Orthodontist', 
+            qualification: 'DDS, MS Orthodontics', 
+            experience: '12+ Years', 
+            image_url: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=800&auto=format&fit=crop' 
+          },
+          { 
+            name: 'Dr. Michael Chen', 
+            role: 'Implant Specialist', 
+            qualification: 'DMD, Oral Surgery', 
+            experience: '15+ Years', 
+            image_url: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=800&auto=format&fit=crop' 
+          },
+          { 
+            name: 'Dr. Emily Carter', 
+            role: 'Pediatric Dentist', 
+            qualification: 'DDS, Pediatric Spec.', 
+            experience: '8+ Years', 
+            image_url: 'https://images.unsplash.com/photo-1594824436998-efa856b7c938?q=80&w=800&auto=format&fit=crop' 
+          },
+          { 
+            name: 'Dr. James Wilson', 
+            role: 'Cosmetic Dentist', 
+            qualification: 'DMD, AACD Member', 
+            experience: '10+ Years', 
+            image_url: 'https://images.unsplash.com/photo-1606265752439-1ebeb127b63f?q=80&w=800&auto=format&fit=crop' 
+          }
+        ],
+        viewAllCta: { label: 'Meet Our Full Team', url: '/dentists' }
+      },
+      {
+        blockType: 'smilegallery',
+        anchor: 'gallery',
+        eyebrow: 'REAL RESULTS',
+        heading: 'Before & After Smile Gallery',
+        subheading: 'Drag the slider to see the difference our treatments make. Every transformation is a real patient case.',
+        before_image_url: 'https://images.unsplash.com/photo-1590649880765-91b1956b8276?q=80&w=800&auto=format&fit=crop',
+        after_image_url: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop',
+        before_label: 'BEFORE',
+        after_label: 'AFTER',
+        viewAllCta: { label: 'View Smile Gallery', url: '/gallery' }
+      },
+      {
+        blockType: 'trustsection',
+        eyebrow: 'WHY PATIENTS TRUST US',
+        heading: 'Credibility you can verify',
+        subheading: 'Every claim we make is backed by real experience, real certifications, and real patient outcomes.',
+        stats: [
+          { icon: 'Clock', value: '15+ Years', label: 'Serving Kathmandu since 2010' },
+          { icon: 'Star', value: 'Certified Professionals', label: 'Board-certified dentists, every discipline' },
+          { icon: 'Monitor', value: 'Modern Equipment', label: 'Digital X-ray, scanning & laser dentistry' },
+          { icon: 'Shield', value: 'Hygiene Standards', label: 'Hospital-grade sterilization protocols' },
+          { icon: 'CheckCircle2', value: '98% Satisfaction', label: 'Rated 4.9/5 across 600+ reviews' }
+        ],
+        badges: [
+          { label: 'Award — placeholder' },
+          { label: 'Certification — placeholder' },
+          { label: 'Membership — placeholder' }
+        ]
+      },
+      {
+        blockType: 'testimonialcarousel',
+        anchor: 'testimonials',
+        eyebrow: 'PATIENT STORIES',
+        heading: 'Loved by Families Across Kathmandu',
+        subheading: 'Hear directly from patients who trusted us with their smiles.',
+        reviews: [
           {
-            blockType: 'credibility',
-            stats: [
-              { value: '10,000+', label: 'Happy Patients' },
-              { value: '15+', label: 'Years Experience' },
-              { value: '5,000+', label: 'Successful Procedures' },
-              { value: '98%', label: 'Patient Satisfaction' }
-            ]
+            quote: 'Whitening results were better than I expected, and the booking process on WhatsApp was so easy.',
+            author_name: 'Anisha Gurung',
+            author_role: 'Cosmetic Patient',
+            avatar_url: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop',
+            rating: 5
           },
           {
-            blockType: 'serviceshighlight',
-            badge: 'WHAT WE TREAT',
-            heading: 'Comprehensive care, ',
-            highlightedText: 'one gentle clinic',
-            subheading: 'From routine checkups to full smile transformations, every treatment is planned around your comfort and long-term oral health.',
-            services: [
-              { icon: 'Tooth', title: 'General Dentistry', description: 'Routine exams, cleanings, and preventive care to keep your whole family\'s smile healthy year-round.', url: '/services/general' },
-              { icon: 'Sparkles', title: 'Cosmetic Dentistry', description: 'Veneers, bonding, and smile design tailored to your facial features and personal style.', url: '/services/cosmetic' },
-              { icon: 'ShieldCheck', title: 'Dental Implants', description: 'Permanent, natural-looking tooth replacement using precision-guided implant technology.', url: '/services/implants' },
-              { icon: 'Eye', title: 'Orthodontics', description: 'Braces and clear aligners that straighten teeth discreetly, at any age.', url: '/services/ortho' }
-            ],
-            viewAllCta: { label: 'View All Services', url: '/services' }
+            quote: 'The dental implant procedure was completely painless. Dr. Michael and his team are true professionals.',
+            author_name: 'Rajesh Shrestha',
+            author_role: 'Implant Patient',
+            avatar_url: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=200&auto=format&fit=crop',
+            rating: 5
           },
           {
-  blockType: 'whychooseus',
-  badge: 'WHY PERFECT SMILE',
-  heading: 'Care that feels as good as it looks',
-  subheading: 'Every detail of your visit — from the technology we use to the way our team explains your treatment — is designed to earn your trust from the first appointment.',
-  image_url: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop',
-  floatingStat: {
-    value: '15+',
-    label: 'Years of trusted care'
-  },
-  features: [
-    { icon: 'Clock', title: 'Modern Technology', description: 'Digital X-rays, intraoral scanning, and laser dentistry.' },
-    { icon: 'Star', title: 'Experienced Specialists', description: 'Board-certified dentists across every discipline.' },
-    { icon: 'Heart', title: 'Pain-Free Procedures', description: 'Gentle techniques and sedation options for anxious patients.' },
-    { icon: 'CheckCircle2', title: 'Personalized Care', description: 'Treatment plans built around your goals and budget.' },
-    { icon: 'Shield', title: 'Hygienic Environment', description: 'Hospital-grade sterilization for every instrument, every time.' },
-    { icon: 'Briefcase', title: 'Affordable Plans', description: 'Transparent pricing and flexible payment options.' }
-  ]
-},
-{
-  blockType: 'dentistsgrid',
-  anchor: 'dentists',
-  eyebrow: 'OUR EXPERTS',
-  heading: 'Meet our team of',
-  highlightedText: 'specialist doctors',
-  headingSuffix: 'in Kathmandu',
-  subheading: 'Our board-certified dentists bring decades of combined experience to ensure you receive the highest standard of painless, precision care.',
-  dentists: [
-    { 
-      name: 'Dr. Sarah Jenkins', 
-      role: 'Chief Orthodontist', 
-      qualification: 'DDS, MS Orthodontics', 
-      experience: '12+ Years', 
-      image_url: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=800&auto=format&fit=crop' 
-    },
-    { 
-      name: 'Dr. Michael Chen', 
-      role: 'Implant Specialist', 
-      qualification: 'DMD, Oral Surgery', 
-      experience: '15+ Years', 
-      image_url: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=800&auto=format&fit=crop' 
-    },
-    { 
-      name: 'Dr. Emily Carter', 
-      role: 'Pediatric Dentist', 
-      qualification: 'DDS, Pediatric Spec.', 
-      experience: '8+ Years', 
-      image_url: 'https://images.unsplash.com/photo-1594824436998-efa856b7c938?q=80&w=800&auto=format&fit=crop' 
-    },
-    { 
-      name: 'Dr. James Wilson', 
-      role: 'Cosmetic Dentist', 
-      qualification: 'DMD, AACD Member', 
-      experience: '10+ Years', 
-      image_url: 'https://images.unsplash.com/photo-1606265752439-1ebeb127b63f?q=80&w=800&auto=format&fit=crop' 
-    }
-  ],
-  viewAllCta: { label: 'Meet Our Full Team', url: '/dentists' }
-},
-{
-  blockType: 'smilegallery',
-  anchor: 'gallery',
-  eyebrow: 'REAL RESULTS',
-  heading: 'Before & After Smile Gallery',
-  subheading: 'Drag the slider to see the difference our treatments make. Every transformation is a real patient case.',
-  before_image_url: 'https://images.unsplash.com/photo-1590649880765-91b1956b8276?q=80&w=800&auto=format&fit=crop',
-  after_image_url: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop',
-  before_label: 'BEFORE',
-  after_label: 'AFTER',
-  viewAllCta: { label: 'View Smile Gallery', url: '/gallery' }
-},
-{
-  blockType: 'trustsection',
-  eyebrow: 'WHY PATIENTS TRUST US',
-  heading: 'Credibility you can verify',
-  subheading: 'Every claim we make is backed by real experience, real certifications, and real patient outcomes.',
-  stats: [
-    { icon: 'Clock', value: '15+ Years', label: 'Serving Kathmandu since 2010' },
-    { icon: 'Star', value: 'Certified Professionals', label: 'Board-certified dentists, every discipline' },
-    { icon: 'Monitor', value: 'Modern Equipment', label: 'Digital X-ray, scanning & laser dentistry' },
-    { icon: 'Shield', value: 'Hygiene Standards', label: 'Hospital-grade sterilization protocols' },
-    { icon: 'CheckCircle2', value: '98% Satisfaction', label: 'Rated 4.9/5 across 600+ reviews' }
-  ],
-  badges: [
-    { label: 'Award — placeholder' },
-    { label: 'Certification — placeholder' },
-    { label: 'Membership — placeholder' }
-  ]
-},
-{
-  blockType: 'testimonialcarousel',
-  anchor: 'testimonials',
-  eyebrow: 'PATIENT STORIES',
-  heading: 'Loved by Families Across Kathmandu',
-  subheading: 'Hear directly from patients who trusted us with their smiles.',
-  reviews: [
-    {
-      quote: 'Whitening results were better than I expected, and the booking process on WhatsApp was so easy.',
-      author_name: 'Anisha Gurung',
-      author_role: 'Cosmetic Patient',
-      avatar_url: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop',
-      rating: 5
-    },
-    {
-      quote: 'The dental implant procedure was completely painless. Dr. Michael and his team are true professionals.',
-      author_name: 'Rajesh Shrestha',
-      author_role: 'Implant Patient',
-      avatar_url: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=200&auto=format&fit=crop',
-      rating: 5
-    },
-    {
-      quote: 'My kids actually love coming to the dentist now. The pediatric team is incredibly gentle and patient.',
-      author_name: 'Sarah Thapa',
-      author_role: 'Pediatric Parent',
-      avatar_url: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop',
-      rating: 5
-    }
-  ],
-  trust_badge: {
-    icon_url: 'https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png',
-    text: '4.9 / 5 average rating from 600+ Google reviews'
-  }
-},
-{
-  blockType: 'bookingsection',
-  anchor: 'booking',
-  eyebrow: 'BOOK A VISIT',
-  heading: 'Your appointment, confirmed in minutes',
-  subheading: 'Tell us a little about what you need and preferred time — our front desk will confirm your slot the same day.',
-  benefits: [
-    { text: 'Instant confirmation on request' },
-    { text: 'Flexible morning & evening slots' },
-    { text: 'Free consultation for new patients' }
-  ],
-  whatsapp_cta: { label: 'Book via WhatsApp', url: 'https://wa.me/1234567890' },
-  form_disclaimer: "We'll confirm your slot by phone or WhatsApp within a few hours."
-},
-{
-  blockType: 'contactsection',
-  anchor: 'contact',
-  eyebrow: 'VISIT US',
-  heading: 'Find Perfect Smile Clinic',
-  subheading: 'Located in the heart of Kuleshwor — easy to reach, with parking available on-site.',
-  map_url: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14130.927050965383!2d85.2929!3d27.6946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb185a5df9b945%3A0x6a2c9be958047913!2sKuleshwor%2C%20Kathmandu%2044600%2C%20Nepal!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus',
-  contact_details: [
-    { icon: 'MapPin', title: 'Address', description: 'Kuleshwor Awas Road, behind Nabil Bank, Kathmandu, Nepal, 44600' },
-    { icon: 'Phone', title: 'Phone', description: '01-5374234' },
-    { icon: 'Clock', title: 'Opening Hours', description: 'Sun - Fri: 9:00 AM - 7:00 PM | Sat: 10:00 AM - 2:00 PM' }
-  ],
-  primary_cta: { label: 'Call Clinic', url: 'tel:015374234' },
-  secondary_cta: { label: 'Full Contact Page', url: '/contact' }
-}
+            quote: 'My kids actually love coming to the dentist now. The pediatric team is incredibly gentle and patient.',
+            author_name: 'Sarah Thapa',
+            author_role: 'Pediatric Parent',
+            avatar_url: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop',
+            rating: 5
+          }
+        ],
+        trust_badge: {
+          icon_url: 'https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png',
+          text: '4.9 / 5 average rating from 600+ Google reviews'
+        }
+      },
+      {
+        blockType: 'bookingsection',
+        anchor: 'booking',
+        eyebrow: 'BOOK A VISIT',
+        heading: 'Your appointment, confirmed in minutes',
+        subheading: 'Tell us a little about what you need and preferred time — our front desk will confirm your slot the same day.',
+        benefits: [
+          { text: 'Instant confirmation on request' },
+          { text: 'Flexible morning & evening slots' },
+          { text: 'Free consultation for new patients' }
+        ],
+        whatsapp_cta: { label: 'Book via WhatsApp', url: 'https://wa.me/1234567890' },
+        form_disclaimer: "We'll confirm your slot by phone or WhatsApp within a few hours."
+      },
+      {
+        blockType: 'contactsection',
+        anchor: 'contact',
+        eyebrow: 'VISIT US',
+        heading: 'Find Perfect Smile Clinic',
+        subheading: 'Located in the heart of Kuleshwor — easy to reach, with parking available on-site.',
+        map_url: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14130.927050965383!2d85.2929!3d27.6946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb185a5df9b945%3A0x6a2c9be958047913!2sKuleshwor%2C%20Kathmandu%2044600%2C%20Nepal!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus',
+        contact_details: [
+          { icon: 'MapPin', title: 'Address', description: 'Kuleshwor Awas Road, behind Nabil Bank, Kathmandu, Nepal, 44600' },
+          { icon: 'Phone', title: 'Phone', description: '01-5374234' },
+          { icon: 'Clock', title: 'Opening Hours', description: 'Sun - Fri: 9:00 AM - 7:00 PM | Sat: 10:00 AM - 2:00 PM' }
+        ],
+        primary_cta: { label: 'Call Clinic', url: 'tel:015374234' },
+        secondary_cta: { label: 'Full Contact Page', url: '/contact' }
+      }
     ]
   })
 
-await upsertPage('about', {
+  await upsertPage('about', {
     title: 'About Us',
     slug: 'about',
     blocks: [
@@ -304,22 +304,30 @@ await upsertPage('about', {
         ]
       },
       {
-        blockType: 'trustsection',
-        eyebrow: 'WHY PATIENTS TRUST US',
-        heading: 'Credibility you can verify',
-        subheading: 'Every claim we make is backed by real experience, real certifications, and real patient outcomes.',
-        stats: [
-          { icon: 'Clock', value: '15+ Years', label: 'Serving Kathmandu since 2010' },
-          { icon: 'Star', value: 'Certified Professionals', label: 'Board-certified dentists, every discipline' },
-          { icon: 'Monitor', value: 'Modern Equipment', label: 'Digital X-ray, scanning & laser dentistry' },
-          { icon: 'Shield', value: 'Hygiene Standards', label: 'Hospital-grade sterilization protocols' },
-          { icon: 'Check', value: '98% Satisfaction', label: 'Rated 4.9/5 across 600+ reviews' }
-        ],
-        badges: [
-          { label: 'Award — placeholder' },
-          { label: 'Certification — placeholder' },
-          { label: 'Professional Membership — placeholder' }
+        blockType: 'featuresgrid',
+        eyebrow: 'WHAT WE STAND FOR',
+        heading: 'Core Values',
+        subheading: 'The principles every member of our team is trained around.',
+        features: [
+          { icon: 'checkcircle2', title: 'Honesty First', description: 'Clear, jargon-free explanations before any treatment decision.' },
+          { icon: 'heart', title: 'Genuine Care', description: 'Every patient treated like family, not a number on a schedule.' },
+          { icon: 'star', title: 'Clinical Excellence', description: 'Continuous training to stay current with modern techniques.' },
+          { icon: 'shield', title: 'Uncompromising Hygiene', description: 'Hospital-grade sterilization for every instrument, every time.' }
         ]
+      },
+      {
+        blockType: 'bookingsection',
+        anchor: 'booking',
+        eyebrow: 'BOOK A VISIT',
+        heading: 'Your appointment, confirmed in minutes',
+        subheading: 'Tell us a little about what you need and preferred time — our front desk will confirm your slot the same day.',
+        benefits: [
+          { text: 'Instant confirmation on request' },
+          { text: 'Flexible morning & evening slots' },
+          { text: 'Free consultation for new patients' }
+        ],
+        whatsapp_cta: { label: 'Book via WhatsApp', url: 'https://wa.me/1234567890' },
+        form_disclaimer: "We'll confirm your slot by phone or WhatsApp within a few hours."
       }
     ]
   })
@@ -388,7 +396,57 @@ await upsertPage('about', {
     }
   })
   console.log('Updated Global: footer')
-
+await upsertPage('services', {
+    title: 'Services',
+    slug: 'services',
+    blocks: [
+      {
+        blockType: 'innerheader',
+        breadcrumb: 'HOME / SERVICES',
+        badge: 'WHAT WE TREAT',
+        heading: 'Comprehensive Dental Care, ',
+        highlightedText: 'One Gentle Clinic',
+        subheading: 'From routine checkups to full smile transformations, every treatment at Perfect Smile is planned around your comfort, your budget, and your long-term oral health.'
+      },
+      {
+        blockType: 'detailedservices',
+        eyebrow: 'FULL TREATMENT LIST',
+        heading: 'Every service, ',
+        highlightedText: 'explained simply',
+        subheading: 'Tap into the details below to see exactly what each treatment includes, how long it typically takes, and how to book it.',
+        services: [
+          {
+            icon: 'stethoscope',
+            image_url: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop',
+            title: 'General Dentistry',
+            description: "Routine exams, professional cleanings, and preventive care to keep your whole family's smile healthy year-round. We focus on catching small issues before they become big ones.",
+            checklist: [
+              { text: 'Comprehensive oral exam & digital X-rays' },
+              { text: 'Scaling and professional cleaning' },
+              { text: 'Cavity checks & fluoride treatment' },
+              { text: 'Personalized home-care plan' }
+            ],
+            visit_info: { label: 'Typical Visit', duration: '45–60 min' },
+            cta: { label: 'Book Checkup', url: '/contact' }
+          },
+          {
+            icon: 'sparkles',
+            image_url: 'https://images.unsplash.com/photo-1590649880765-91b1956b8276?q=80&w=800&auto=format&fit=crop',
+            title: 'Teeth Whitening',
+            description: 'Safe, dentist-supervised in-clinic and take-home whitening systems for a noticeably brighter smile — often visible after a single visit.',
+            checklist: [
+              { text: 'Shade assessment & consultation' },
+              { text: 'In-chair laser whitening option' },
+              { text: 'Custom take-home whitening trays' },
+              { text: 'Sensitivity-friendly formulas' }
+            ],
+            visit_info: { label: 'Typical Visit', duration: '60–90 min' },
+            cta: { label: 'Brighten My Smile', url: '/contact' }
+          }
+        ]
+      }
+    ]
+  })
   console.log('✅ Seeding complete!')
   process.exit(0)
 }

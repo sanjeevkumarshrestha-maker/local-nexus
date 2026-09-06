@@ -431,3 +431,51 @@ export const FeaturesGridBlock: Block = {
     }
   ]
 }
+export const DetailedServicesBlock: Block = {
+  slug: 'detailedservices',
+  labels: { singular: 'Detailed Services List', plural: 'Detailed Services Lists' },
+  fields: [
+    { name: 'eyebrow', type: 'text', label: 'Eyebrow Text (e.g., FULL TREATMENT LIST)' },
+    { name: 'heading', type: 'text', required: true, label: 'Main Heading' },
+    { name: 'highlightedText', type: 'text', label: 'Underlined Text' },
+    { name: 'subheading', type: 'textarea', label: 'Subtitle/Description' },
+    {
+      name: 'services',
+      type: 'array',
+      label: 'Service Details',
+      minRows: 1,
+      fields: [
+        { name: 'icon', type: 'text', label: 'Lucide Icon Name' },
+        { name: 'image_url', type: 'text', required: true, label: 'Service Image URL' },
+        { name: 'title', type: 'text', required: true, label: 'Service Title' },
+        { name: 'description', type: 'textarea', label: 'Service Description' },
+        {
+          name: 'checklist',
+          type: 'array',
+          label: 'Bullet Points',
+          fields: [
+            { name: 'text', type: 'text', required: true }
+          ]
+        },
+        {
+          name: 'visit_info',
+          type: 'group',
+          label: 'Visit Details (Footer)',
+          fields: [
+            { name: 'label', type: 'text', defaultValue: 'Typical Visit' },
+            { name: 'duration', type: 'text', label: 'Duration (e.g., 45-60 min)' }
+          ]
+        },
+        {
+          name: 'cta',
+          type: 'group',
+          label: 'Action Button',
+          fields: [
+            { name: 'label', type: 'text', label: 'Button Text' },
+            { name: 'url', type: 'text', label: 'Button Link' }
+          ]
+        }
+      ]
+    }
+  ]
+}

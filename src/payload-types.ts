@@ -181,22 +181,35 @@ export interface Page {
     | (
         | {
             eyebrow?: string | null;
-            headline: string;
-            paragraph?: string | null;
+            heading: string;
+            highlightedText?: string | null;
+            subheading?: string | null;
             services?:
               | {
-                  title: string;
                   icon?: string | null;
+                  image_url: string;
+                  title: string;
                   description?: string | null;
-                  image_url?: (string | null) | Media;
-                  duration?: string | null;
-                  cta_text?: string | null;
+                  checklist?:
+                    | {
+                        text: string;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  visit_info?: {
+                    label?: string | null;
+                    duration?: string | null;
+                  };
+                  cta?: {
+                    label?: string | null;
+                    url?: string | null;
+                  };
                   id?: string | null;
                 }[]
               | null;
             id?: string | null;
             blockName?: string | null;
-            blockType: 'detailed_services';
+            blockType: 'detailedservices';
           }
         | {
             eyebrow?: string | null;
@@ -471,6 +484,44 @@ export interface Page {
             eyebrow?: string | null;
             heading: string;
             subheading?: string | null;
+            stats?:
+              | {
+                  icon?: string | null;
+                  value?: string | null;
+                  label?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            badges?:
+              | {
+                  label?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'trustsection';
+          }
+        | {
+            eyebrow?: string | null;
+            heading: string;
+            subheading?: string | null;
+            features?:
+              | {
+                  icon?: string | null;
+                  title: string;
+                  description?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'featuresgrid';
+          }
+        | {
+            eyebrow?: string | null;
+            heading: string;
+            subheading?: string | null;
             images?:
               | {
                   image_url: string;
@@ -615,21 +666,38 @@ export interface PagesSelect<T extends boolean = true> {
   blocks?:
     | T
     | {
-        detailed_services?:
+        detailedservices?:
           | T
           | {
               eyebrow?: T;
-              headline?: T;
-              paragraph?: T;
+              heading?: T;
+              highlightedText?: T;
+              subheading?: T;
               services?:
                 | T
                 | {
-                    title?: T;
                     icon?: T;
-                    description?: T;
                     image_url?: T;
-                    duration?: T;
-                    cta_text?: T;
+                    title?: T;
+                    description?: T;
+                    checklist?:
+                      | T
+                      | {
+                          text?: T;
+                          id?: T;
+                        };
+                    visit_info?:
+                      | T
+                      | {
+                          label?: T;
+                          duration?: T;
+                        };
+                    cta?:
+                      | T
+                      | {
+                          label?: T;
+                          url?: T;
+                        };
                     id?: T;
                   };
               id?: T;
@@ -931,6 +999,46 @@ export interface PagesSelect<T extends boolean = true> {
               heading?: T;
               subheading?: T;
               image_url?: T;
+              features?:
+                | T
+                | {
+                    icon?: T;
+                    title?: T;
+                    description?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        trustsection?:
+          | T
+          | {
+              eyebrow?: T;
+              heading?: T;
+              subheading?: T;
+              stats?:
+                | T
+                | {
+                    icon?: T;
+                    value?: T;
+                    label?: T;
+                    id?: T;
+                  };
+              badges?:
+                | T
+                | {
+                    label?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        featuresgrid?:
+          | T
+          | {
+              eyebrow?: T;
+              heading?: T;
+              subheading?: T;
               features?:
                 | T
                 | {
