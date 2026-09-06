@@ -18,7 +18,7 @@ export const Header: GlobalConfig = {
         {
           name: 'mega_items',
           type: 'array',
-          label: 'Mega Menu Dropdown Items',
+          label: 'Mega Dropdown Items',
           fields: [
             { name: 'label', type: 'text', required: true },
             { name: 'url', type: 'text', required: true },

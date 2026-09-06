@@ -1122,6 +1122,14 @@ export interface Header {
     | {
         label: string;
         url: string;
+        mega_items?:
+          | {
+              label: string;
+              url: string;
+              description?: string | null;
+              id?: string | null;
+            }[]
+          | null;
         id?: string | null;
       }[]
     | null;
@@ -1197,6 +1205,14 @@ export interface HeaderSelect<T extends boolean = true> {
     | {
         label?: T;
         url?: T;
+        mega_items?:
+          | T
+          | {
+              label?: T;
+              url?: T;
+              description?: T;
+              id?: T;
+            };
         id?: T;
       };
   cta_text?: T;
