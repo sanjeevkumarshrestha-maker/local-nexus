@@ -97,7 +97,34 @@ export const ServicesHighlight: Block = {
     }
   ]
 }
-
+export const DentistsPreviewBlock: Block = {
+  slug: 'dentistspreview',
+  labels: { singular: 'Dentists Preview (Home)', plural: 'Dentists Previews' },
+  fields: [
+    { name: 'anchor', type: 'text', defaultValue: 'dentists-preview' },
+    { name: 'eyebrow', type: 'text' },
+    { name: 'heading', type: 'text', required: true },
+    { name: 'subheading', type: 'textarea' },
+    {
+      name: 'dentists',
+      type: 'array',
+      minRows: 1,
+      maxRows: 2, // Restrict to 2 for the homepage preview
+      fields: [
+        { name: 'name', type: 'text', required: true },
+        { name: 'role', type: 'text' },
+        { name: 'qualification', type: 'text' },
+        { name: 'experience', type: 'text' },
+        { name: 'image_url', type: 'text', required: true }
+      ]
+    },
+    {
+      name: 'viewAllCta',
+      type: 'group',
+      fields: [{ name: 'label', type: 'text' }, { name: 'url', type: 'text' }]
+    }
+  ]
+}
 export const DentistsGridBlock: Block = {
   slug: 'dentistsgrid',
   labels: { singular: 'Dentists Grid', plural: 'Dentists Grids' },

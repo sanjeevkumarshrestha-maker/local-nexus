@@ -336,26 +336,22 @@ async function run() {
     slug: 'header',
     data: {
       logo_text: 'Perfect Smile',
+      // Use the expected property name `logo_url`. Use forward slashes or escaped backslashes for file paths/URLs.
+      logo_url: '/logo.png', // Add your actual logo image URL here if you have one
       nav_links: [
         { label: 'Home', url: '/' },
-        { 
-          label: 'Services', 
-          url: '/services',
-          mega_items: [
-            { label: 'General Dentistry', url: '/services/general', description: 'Routine care & checkups' },
-            { label: 'Cosmetic', url: '/services/cosmetic', description: 'Veneers & whitening' },
-            { label: 'Implants', url: '/services/implants', description: 'Permanent replacement' }
-          ]
-        },
-        { label: 'About Us', url: '/about' },
+        { label: 'About', url: '/about' },
+        { label: 'Services', url: '/services' },
         { label: 'Dentists', url: '/dentists' },
-        { label: 'Smile Gallery', url: '/gallery' },
+        { label: 'Gallery', url: '/gallery' },
         { label: 'Contact', url: '/contact' }
       ],
-      secondary_cta_text: '(01) 456-7890',
-      secondary_cta_link: 'tel:014567890',
-      cta_text: 'Book Online',
-      cta_link: '/contact'
+      secondary_cta_text: 'Call Now',
+      secondary_cta_link: 'tel:015374234',
+      
+      // THIS is what triggers the smooth scroll to the form!
+      cta_text: 'Book Appointment',
+      cta_link: '/contact#booking' 
     }
   })
   console.log('Updated Global: header')
@@ -634,16 +630,81 @@ async function run() {
         subheading: 'Every before-and-after case shown here is a real Perfect Smile patient. Drag the slider, filter by treatment, and see the kind of results our team delivers every day.'
       },
       {
-        blockType: 'smilegallery',
-        anchor: 'gallery',
-        eyebrow: 'DRAG TO COMPARE',
-        heading: 'Before & After',
-        subheading: 'A featured smile transformation — drag the handle to see the difference.',
-        before_image_url: 'https://images.unsplash.com/photo-1590649880765-91b1956b8276?q=80&w=800&auto=format&fit=crop',
-        after_image_url: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop',
-        before_label: 'BEFORE',
-        after_label: 'AFTER'
-        // viewAllCta has been completely removed from here!
+        blockType: 'filterablegallery',
+        eyebrow: 'BROWSE BY TREATMENT',
+        heading: 'Smile Transformations',
+        subheading: 'Filter the gallery below to see results from a specific treatment category.',
+        categories: [
+          { label: 'All Cases', value: 'all' },
+          { label: 'Cosmetic', value: 'cosmetic' },
+          { label: 'Implants', value: 'implants' },
+          { label: 'Whitening', value: 'whitening' },
+          { label: 'Orthodontics', value: 'orthodontics' }
+        ],
+        images: [
+          { label: 'Cosmetic Bonding', category_value: 'cosmetic', image_url: 'https://images.unsplash.com/photo-1606265752439-1ebeb127b63f?q=80&w=800&auto=format&fit=crop' },
+          { label: 'Full Implant', category_value: 'implants', image_url: 'https://images.unsplash.com/photo-1528114039593-4366cc08227d?q=80&w=800&auto=format&fit=crop' },
+          { label: 'Professional Whitening', category_value: 'whitening', image_url: 'https://images.unsplash.com/photo-1590649880765-91b1956b8276?q=80&w=800&auto=format&fit=crop' },
+          { label: 'Clear Aligners', category_value: 'orthodontics', image_url: 'https://images.unsplash.com/photo-1527613426441-4da17471b66d?q=80&w=800&auto=format&fit=crop' },
+          { label: 'Porcelain Veneers', category_value: 'cosmetic', image_url: 'https://images.unsplash.com/photo-1522844990619-4951c40f7eda?q=80&w=800&auto=format&fit=crop' },
+          { label: 'Single Tooth Implant', category_value: 'implants', image_url: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=800&auto=format&fit=crop' },
+          { label: 'In-Chair Whitening', category_value: 'whitening', image_url: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800&auto=format&fit=crop' },
+          { label: 'Metal Braces', category_value: 'orthodontics', image_url: 'https://images.unsplash.com/photo-1598300188904-6287d52746ad?q=80&w=800&auto=format&fit=crop' },
+          { label: 'Smile Makeover', category_value: 'cosmetic', image_url: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop' },
+          { label: 'Full-Arch Implants', category_value: 'implants', image_url: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=800&auto=format&fit=crop' },
+          { label: 'Take-Home Whitening', category_value: 'whitening', image_url: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=800&auto=format&fit=crop' },
+          { label: 'Ceramic Braces', category_value: 'orthodontics', image_url: 'https://images.unsplash.com/photo-1584432810601-6c7f27d2362b?q=80&w=800&auto=format&fit=crop' },
+          { label: 'Gum Contouring', category_value: 'cosmetic', image_url: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=800&auto=format&fit=crop' },
+          { label: 'Zirconia Crown', category_value: 'implants', image_url: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=800&auto=format&fit=crop' },
+          { label: 'Laser Gum Treatment', category_value: 'whitening', image_url: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=800&auto=format&fit=crop' },
+          { label: 'Lingual Braces', category_value: 'orthodontics', image_url: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop' }
+        ]
+      },
+    ]
+  })
+  await upsertPage('contact', {
+    title: 'Contact Us',
+    slug: 'contact',
+    blocks: [
+      {
+        blockType: 'innerheader',
+        breadcrumb: 'HOME / CONTACT',
+        badge: 'GET IN TOUCH',
+        heading: "We'd Love to ",
+        highlightedText: 'See You Smile',
+        subheading: 'Reach out by phone, WhatsApp, or the form below — our front desk typically confirms appointments within a few hours.'
+      },
+      {
+        blockType: 'contactsection',
+        anchor: 'contact',
+        eyebrow: 'VISIT US',
+        heading: 'Find Perfect Smile Clinic',
+        subheading: 'Located in the heart of Kuleshwor — easy to reach, with parking available on-site.',
+        map_url: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14130.927050965383!2d85.2929!3d27.6946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb185a5df9b945%3A0x6a2c9be958047913!2sKuleshwor%2C%20Kathmandu%2044600%2C%20Nepal!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus',
+        contact_details: [
+          { icon: 'Building2', title: 'Perfect Smile Oral & Dental Clinic Pvt. Ltd.', description: 'Registered dental care provider' },
+          { icon: 'MapPin', title: 'Address', description: 'Kuleshwor Awas Road, behind Nabil Bank, Kathmandu, Nepal, 44600' },
+          { icon: 'Phone', title: 'Phone', description: '01-5374234' },
+          { icon: 'Mail', title: 'Email', description: 'perfectsmile17@hotmail.com' },
+          { icon: 'Clock', title: 'Opening Hours', description: 'Sun - Fri: 9:00 AM - 7:00 PM | Sat: 10:00 AM - 2:00 PM' },
+          { icon: 'AlertCircle', title: 'Emergency Line', description: 'Same-day urgent appointments — call anytime during clinic hours' }
+        ],
+        primary_cta: { label: 'Call Clinic', url: 'tel:015374234' },
+        secondary_cta: { label: 'WhatsApp', url: 'https://wa.me/1234567890' }
+      },
+      {
+        blockType: 'bookingsection',
+        anchor: 'booking',
+        eyebrow: 'BOOK A VISIT',
+        heading: 'Your appointment, confirmed in minutes',
+        subheading: 'Tell us a little about what you need and preferred time — our front desk will confirm your slot the same day.',
+        benefits: [
+          { text: 'Instant confirmation on request' },
+          { text: 'Flexible morning & evening slots' },
+          { text: 'Free consultation for new patients' }
+        ],
+        whatsapp_cta: { label: 'Book via WhatsApp', url: 'https://wa.me/1234567890' },
+        form_disclaimer: "We'll confirm your slot by phone or WhatsApp within a few hours."
       }
     ]
   })

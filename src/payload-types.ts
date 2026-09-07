@@ -533,6 +533,29 @@ export interface Page {
             blockName?: string | null;
             blockType: 'imagegrid';
           }
+        | {
+            eyebrow?: string | null;
+            heading: string;
+            subheading?: string | null;
+            categories?:
+              | {
+                  label: string;
+                  value: string;
+                  id?: string | null;
+                }[]
+              | null;
+            images?:
+              | {
+                  image_url: string;
+                  label: string;
+                  category_value: string;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'filterablegallery';
+          }
       )[]
     | null;
   updatedAt: string;
@@ -1061,6 +1084,30 @@ export interface PagesSelect<T extends boolean = true> {
                 | {
                     image_url?: T;
                     label?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        filterablegallery?:
+          | T
+          | {
+              eyebrow?: T;
+              heading?: T;
+              subheading?: T;
+              categories?:
+                | T
+                | {
+                    label?: T;
+                    value?: T;
+                    id?: T;
+                  };
+              images?:
+                | T
+                | {
+                    image_url?: T;
+                    label?: T;
+                    category_value?: T;
                     id?: T;
                   };
               id?: T;
