@@ -59,10 +59,30 @@ async function run() {
         highlightedText: 'one gentle clinic',
         subheading: 'From routine checkups to full smile transformations, every treatment is planned around your comfort and long-term oral health.',
         services: [
-          { icon: 'Tooth', title: 'General Dentistry', description: 'Routine exams, cleanings, and preventive care to keep your whole family\'s smile healthy year-round.', url: '/services/general' },
-          { icon: 'Sparkles', title: 'Cosmetic Dentistry', description: 'Veneers, bonding, and smile design tailored to your facial features and personal style.', url: '/services/cosmetic' },
-          { icon: 'ShieldCheck', title: 'Dental Implants', description: 'Permanent, natural-looking tooth replacement using precision-guided implant technology.', url: '/services/implants' },
-          { icon: 'Eye', title: 'Orthodontics', description: 'Braces and clear aligners that straighten teeth discreetly, at any age.', url: '/services/ortho' }
+          {
+            icon: 'Tooth',
+            title: 'General Dentistry',
+            description: "Routine exams, cleanings, and preventive care to keep your whole family's smile healthy year-round.",
+            url: '/services/general'
+          },
+          {
+            icon: 'CheckCircle2',
+            title: 'Cosmetic Dentistry',
+            description: 'Veneers, bonding, and smile design tailored to your facial features and personal style.',
+            url: '/services/cosmetic'
+          },
+          {
+            icon: 'Sparkles',
+            title: 'Dental Implants',
+            description: 'Permanent, natural-looking tooth replacement using precision-guided implant technology.',
+            url: '/services/implants'
+          },
+          {
+            icon: 'Eye',
+            title: 'Orthodontics',
+            description: 'Braces and clear aligners that straighten teeth discreetly, at any age.',
+            url: '/services/ortho'
+          }
         ],
         viewAllCta: { label: 'View All Services', url: '/services' }
       },
@@ -86,41 +106,25 @@ async function run() {
         ]
       },
       {
-        blockType: 'dentistsgrid',
-        anchor: 'dentists',
-        eyebrow: 'OUR EXPERTS',
-        heading: 'Meet our team of',
-        highlightedText: 'specialist doctors',
-        headingSuffix: 'in Kathmandu',
-        subheading: 'Our board-certified dentists bring decades of combined experience to ensure you receive the highest standard of painless, precision care.',
+        blockType: 'dentistspreview',
+        anchor: 'dentists-preview',
+        eyebrow: 'OUR TEAM',
+        heading: 'Meet Our Dentists',
+        subheading: 'A specialist team dedicated to precision, comfort, and genuinely caring for every patient who walks through our doors.',
         dentists: [
-          { 
-            name: 'Dr. Sarah Jenkins', 
-            role: 'Chief Orthodontist', 
-            qualification: 'DDS, MS Orthodontics', 
-            experience: '12+ Years', 
-            image_url: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=800&auto=format&fit=crop' 
+          {
+            name: 'Dr. Aakriti Shrestha',
+            role: 'COSMETIC DENTISTRY',
+            qualification: 'BDS, MDS — Cosmetic & Restorative',
+            experience: '12 Years Experience',
+            image_url: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=800&auto=format&fit=crop'
           },
-          { 
-            name: 'Dr. Michael Chen', 
-            role: 'Implant Specialist', 
-            qualification: 'DMD, Oral Surgery', 
-            experience: '15+ Years', 
-            image_url: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=800&auto=format&fit=crop' 
-          },
-          { 
-            name: 'Dr. Emily Carter', 
-            role: 'Pediatric Dentist', 
-            qualification: 'DDS, Pediatric Spec.', 
-            experience: '8+ Years', 
-            image_url: 'https://images.unsplash.com/photo-1594824436998-efa856b7c938?q=80&w=800&auto=format&fit=crop' 
-          },
-          { 
-            name: 'Dr. James Wilson', 
-            role: 'Cosmetic Dentist', 
-            qualification: 'DMD, AACD Member', 
-            experience: '10+ Years', 
-            image_url: 'https://images.unsplash.com/photo-1606265752439-1ebeb127b63f?q=80&w=800&auto=format&fit=crop' 
+          {
+            name: 'Dr. Bibek Karki',
+            role: 'ORAL & MAXILLOFACIAL SURGERY',
+            qualification: 'BDS, MDS — Implants & Surgery',
+            experience: '15 Years Experience',
+            image_url: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=800&auto=format&fit=crop'
           }
         ],
         viewAllCta: { label: 'Meet Our Full Team', url: '/dentists' }
