@@ -24,7 +24,11 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  cors: ['http://localhost:8080', 'http://localhost:5173', 'https://perfect-smile-sand.vercel.app'], 
+  cors: [
+    'http://localhost:8080', 
+    'http://localhost:5173', 
+    'https://hive-render-engine.vercel.app' 
+  ], 
   collections: [Users, Media, Pages],
   globals: [Header, Footer],
   editor: lexicalEditor(),
