@@ -27,8 +27,9 @@ export default buildConfig({
   cors: [
     'http://localhost:8080', 
     'http://localhost:5173', 
-    'https://hive-render-engine.vercel.app' 
-  ], 
+    'https://hive-render-engine.vercel.app',
+    /^https:\/\/hive-render-engine.*\.vercel\.app$/ // <-- The Permanent Fix
+  ],
   collections: [Users, Media, Pages],
   globals: [Header, Footer],
   editor: lexicalEditor(),
